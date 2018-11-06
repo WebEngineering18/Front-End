@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit-icons.min.js"></script>
+
+        <style>
+            body {
+                font-family: verdana;
+            }
+            .overall {
+                width: 50%;
+                margin: 0 auto; 
+                background-color: #f2f2f2;
+            }
+            .kategorie {
+                font-size: 20px;
+                padding-left: 20px;
+                padding-top: 20px;
+                background-color: white;
+            }
+            .question {
+                padding-left: 30px;
+                padding-top: 30px;
+
+            }
+            .checkbox {
+                padding-top: 30px;
+                text-align:center;
+            }
+            input {
+                padding-right: 10px;
+            }
+            textarea {
+                display: block;
+                margin: 0 auto;
+                resize: none;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="overall">
+            <div class="kategorie">1. Kategorie</div>
+
+            <div class="question">
+                1.Frage 
+            </div>
+            <hr>
+            <div class="checkbox">
+                <input type="checkbox">Trifft zu
+                <input type="checkbox"> Trifft teilweise zu
+                <input type="checkbox">Trifft überwiegend nicht zu
+                <input type="checkbox"> Trifft nicht zu
+            </div>
+            <div class="question">
+                2.Frage
+            </div><hr>
+            <div class="textbox">
+                <textarea rows="5" cols="100" maxlength="120"></textarea>
+            </div>
+
+            <div class="question">
+                3.Frage
+                <button class="uk-button" data-uk-tooltip title="Sie sollen das machen was hier steht.">Tipp</button>
+            </div><hr>
+            <div class ="checkbox">
+                <input type="checkbox" id="check" onclick="myFunction()">Trifft zu
+            </div>
+
+            <div class="checkbox" id="special" style="display:none">
+                <input type="checkbox"> Trifft teilweise zu
+                <input type="checkbox">Trifft überwiegend nicht zu
+                <input type="checkbox"> Trifft nicht zu
+            </div>
+            <div class="checkbox">
+                <input type="checkbox"> Trifft teilweise zu
+                <input type="checkbox">Trifft überwiegend nicht zu
+                <input type="checkbox"> Trifft nicht zu
+            </div>
+            <div class="question">
+                4.Frage
+            </div>
+            <hr>
+            <div class="checkbox">
+                <input type="range" min="1" max="100" value="50" id="mySlider" onchange="updateTextInput(this.value)">
+                <input type="number" min="1" max="100" value="50" id="myNumber">
+                <input type="button" value="Change Value" onclick="myFunction2()">
+            </div>
+            
+                <span style="float:right;padding-top: 10px">
+                   <input type="button" value="Next" id="1"> 
+                </span>
+                    
+                <span style="float:left;padding-top: 10px;">
+                   <input type="button" value="Last" id="2">
+                </span>
+                    
+               
+           
+            
+            <script>
+                function myFunction() {
+                    if (document.getElementById("check").checked) {
+                        document.getElementById("special").style.display = "block";
+                    } else {
+                        document.getElementById("special").style.display = "none";
+                    }
+                }
+                function myFunction2() {
+                    var x = document.getElementById("myNumber").value;
+                    document.getElementById("mySlider").value = x;
+                }
+                function updateTextInput(val) {
+                    document.getElementById("myNumber").value=val;
+                }
+            </script>
+    </body>
+</html>
