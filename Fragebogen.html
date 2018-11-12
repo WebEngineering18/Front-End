@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Allgemeines</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/css/uikit.min.css" />
@@ -14,117 +14,106 @@ and open the template in the editor.
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit-icons.min.js"></script>
 
         <style>
-            body {
+            html, body {
                 font-family: verdana;
+                margin: 0;
+                height: 100%;
             }
             .overall {
                 width: 50%;
                 margin: 0 auto; 
                 background-color: #f2f2f2;
+                overflow: auto;
             }
-            .kategorie {
-                font-size: 20px;
-                padding-left: 20px;
-                padding-top: 20px;
-                background-color: white;
-            }
-            .question {
-                padding-left: 30px;
-                padding-top: 30px;
-
-            }
-            .checkbox {
-                padding-top: 30px;
-                text-align:center;
-            }
-            input {
-                padding-right: 10px;
-            }
-            textarea {
-                display: block;
-                margin: 0 auto;
-                resize: none;
-            }
-            
-            
+                  
         </style>
     </head>
-    <body>
+    <body class="uk-background-muted">
 
-        <div class="overall">
-            <div class="kategorie">1. Kategorie</div>
+        <div class="overall"><br>
+            <div class="uk-container uk-heading-divider">
+                <span class="uk-text-large">Allgemeines</span>
+                <progress class="uk-progress" value="0" max="20" style="width: 30%; float:right"></progress>
+            </div>
+            <div class="uk-container">
+                <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+                    1. Fachbereich Ihres Unternehmens
+                </div><hr>
+                <div>
+                    <label><input class="uk-checkbox" type="checkbox"> Hoch- und Massivbau<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Fliesen und Naturstein<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Betonwerkstein, Fertigteile, Terrazzo und Naturstein<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Ausbau und Fassade<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Estrich und Belag<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Holzbau<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Wärme-, Kälte-, Schall- und Brandschutze<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Ausbau und Trockenbau<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Bauwerksabdichtung<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Fassadenbau<br></label>
+                </div>
 
-            <div class="question">
-                1.Frage 
             </div>
-            <hr>
-            <div class="checkbox">
-                <input type="checkbox">Trifft zu
-                <input type="checkbox"> Trifft teilweise zu
-                <input type="checkbox">Trifft überwiegend nicht zu
-                <input type="checkbox"> Trifft nicht zu
+            <div class="uk-container">
+                <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+                    2. Tätig als
+                </div><hr>
+                <div>
+                    <label><input class="uk-radio" type="radio" name="radio"> Generalunternehmer<br></label>
+                    <label><input class="uk-radio" type="radio" name="radio"> Generalübernehmer<br></label>
+                    <label><input class="uk-radio" type="radio" name="radio"> Bauunternehmer<br></label>
+                    <label><input class="uk-radio" type="radio" name="radio"> Bauträger<br></label>
+                    <label><input class="uk-radio" type="radio" name="radio"> Handwerksbetrieb</label>
+
+                </div>
             </div>
-            <div class="question">
-                2.Frage
-            </div><hr>
-            <div class="textbox">
-                <textarea rows="5" cols="100" maxlength="120"></textarea>
+            <div class="uk-container">
+                <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+                    3. Gesamtanzahl Bauvorhaben / Projekte in den letzten 5 Jahren
+                </div><hr>
+                <div>
+                    <label><input class="uk-radio" type="radio" name="radio2"> < 10<br></label>
+                    <label><input class="uk-radio" type="radio" name="radio2"> < 50<br></label>
+                    <label><input class="uk-radio" type="radio" name="radio2"> < 100<br></label>
+                    <label><input class="uk-radio" type="radio" name="radio2"> > 100</label>
+
+                </div>
             </div>
 
-            <div class="question">
-                3.Frage
-                <button class="uk-button" data-uk-tooltip title="Sie sollen das machen was hier steht.">Tipp</button>
-            </div><hr>
-            <div class ="checkbox">
-                <input type="checkbox" id="check" onclick="myFunction()">Trifft zu
-            </div>
-
-            <div class="checkbox" id="special" style="display:none">
-                <input type="checkbox"> Trifft teilweise zu
-                <input type="checkbox">Trifft überwiegend nicht zu
-                <input type="checkbox"> Trifft nicht zu
-            </div>
-            <div class="checkbox">
-                <input type="checkbox"> Trifft teilweise zu
-                <input type="checkbox">Trifft überwiegend nicht zu
-                <input type="checkbox"> Trifft nicht zu
-            </div>
-            <div class="question">
-                4.Frage
-            </div>
-            <hr>
-            <div class="checkbox">
-                <input type="range" min="1" max="100" value="50" id="mySlider" onchange="updateTextInput(this.value)">
-                <input type="number" min="1" max="100" value="50" id="myNumber">
-                <input type="button" value="Change Value" onclick="myFunction2()">
-            </div>
-            
+            <!--   <div class="checkbox">
+                   <input type="range" min="1" max="100" value="50" id="mySlider" onchange="updateTextInput(this.value)">
+                   <input type="number" min="1" max="100" value="50" id="myNumber">
+                   <input type="button" value="Change Value" onclick="myFunction2()">
+               </div> -->
+            <div class="uk-container uk-margin-top">
                 <span style="float:right;padding-top: 10px">
-                   <input type="button" value="Next" id="1"> 
+                    <a class="uk-button uk-button-default" href="#">Weiter</a>
                 </span>
-                    
+
                 <span style="float:left;padding-top: 10px;">
-                   <input type="button" value="Last" id="2">
+                    <a class="uk-button uk-button-default" href="start.html">Zurück</a>
                 </span>
-                    
-               
-           
-            
-            <script>
-                function myFunction() {
-                    if (document.getElementById("check").checked) {
-                        document.getElementById("special").style.display = "block";
-                    } else {
-                        document.getElementById("special").style.display = "none";
-                    }
+            </div><br>
+        </div>
+
+
+
+
+
+    <!--    <script>
+            function myFunction() {
+                if (document.getElementById("check").checked) {
+                    document.getElementById("special").style.display = "block";
+                } else {
+                    document.getElementById("special").style.display = "none";
                 }
-                function myFunction2() {
-                    var x = document.getElementById("myNumber").value;
-                    document.getElementById("mySlider").value = x;
-                }
-                function updateTextInput(val) {
-                    document.getElementById("myNumber").value=val;
-                }
-            </script>
+            }
+            function myFunction2() {
+                var x = document.getElementById("myNumber").value;
+                document.getElementById("mySlider").value = x;
+            }
+            function updateTextInput(val) {
+                document.getElementById("myNumber").value = val;
+            }
+        </script> -->
     </body>
 </html>
