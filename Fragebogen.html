@@ -9,46 +9,12 @@ and open the template in the editor.
         <title>Allgemeines</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="C:\Users\micha\OneDrive\Dokumente\NetBeansProjects\Fragebogen\web\css\uikit.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/css/uikit.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
         <script src="C:\Users\micha\OneDrive\Dokumente\NetBeansProjects\Fragebogen\web\js\uikit.min.js"></script>
         <script src="C:\Users\micha\OneDrive\Dokumente\NetBeansProjects\Fragebogen\web\js\uikit-icons.min.js"></script>
-
-        <style>
-            html, body {
-                font-family: verdana;
-                margin: 0;
-                height: 100%;
-                width: 100%;
-                display: table;
-            }
-            .overall {
-                width: 50%;
-                margin: 0 auto; 
-                background-color: #f2f2f2;
-                overflow: auto;
-            }
-            @media screen and (max-width:1024px) { 
-                .overall {
-                    width: 100% !important;
-                }
-            }
-
-        </style>
-        <script>
-            function valCheckbox() {
-                var checkBoxes = document.getElementsByClassName('uk-checkbox');
-                var isChecked = false;
-                for (var i = 0; i < checkBoxes.length; i++) {
-                    if (checkBoxes[i].checked) {
-                        isChecked = true;
-                        break; 
-                    }         
-                }
-                if (!isChecked) {
-                    alert('Sie müssen bei der ersten Frage mindestens ein Feld markieren!');
-                }
-            }
-        </script>
+        <script src="js/validate.js"></script>
+        
     </head>
     <body class="uk-background-muted">
 
