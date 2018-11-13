@@ -18,8 +18,8 @@ and open the template in the editor.
                 font-family: verdana;
                 margin: 0;
                 height: 100%;
-				width: 100%;
-				display: table;
+                width: 100%;
+                display: table;
             }
             .overall {
                 width: 50%;
@@ -27,13 +27,28 @@ and open the template in the editor.
                 background-color: #f2f2f2;
                 overflow: auto;
             }
-           @media screen and (max-width:1024px) { 
-			 .overall {
-                width: 100% !important;
+            @media screen and (max-width:1024px) { 
+                .overall {
+                    width: 100% !important;
+                }
             }
-			}
-                  
+
         </style>
+        <script>
+            function valCheckbox() {
+                var checkBoxes = document.getElementsByClassName('uk-checkbox');
+                var isChecked = false;
+                for (var i = 0; i < checkBoxes.length; i++) {
+                    if (checkBoxes[i].checked) {
+                        isChecked = true;
+                        break; 
+                    }         
+                }
+                if (!isChecked) {
+                    alert('Sie müssen bei der ersten Frage mindestens ein Feld markieren!');
+                }
+            }
+        </script>
     </head>
     <body class="uk-background-muted">
 
@@ -43,10 +58,10 @@ and open the template in the editor.
 
 
                 <div style="width: 30%; float:right;position: relative;">
-                	     <progress class="uk-progress" value="0" max="20"></progress>
-                	     <div style="font-size: 12px;position: absolute;top: 0;left: 40%;">0% (0/20)</div>
+                    <progress class="uk-progress" value="0" max="20"></progress>
+                    <div style="font-size: 12px;position: absolute;top: 0;left: 40%;">0% (0/20)</div>
                 </div>
-           
+
             </div>
             <div class="uk-container">
                 <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
@@ -94,7 +109,7 @@ and open the template in the editor.
 
             <div class="uk-container uk-margin-top">
                 <span style="float:right;padding-top: 10px">
-                    <a class="uk-button uk-button-default" href="#">Weiter</a>
+                    <a class="uk-button uk-button-default" href="#" onclick="valCheckbox()">Weiter</a>
                 </span>
 
                 <span style="float:left;padding-top: 10px;">
