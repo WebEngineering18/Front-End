@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Abnahme / Gewährleistung</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/css/uikit.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style\stylesheet.css"/>
+		<link rel="shortcut icon" href="https://goo.gl/1Um5tm" />
+        <script src="js\validate.js"></script>
+        
+    </head>
+    <body class="uk-background-muted">
+
+        <div class="overall"><br>
+            <div class="uk-container uk-heading-divider">
+                <span class="uk-text-large">Abnahme / Gewährleistung</span>
+
+
+                <div class="percbar">
+                    <progress class="uk-progress" value="12" max="20"></progress>
+                    <div class="percentage">60% (12/20)</div>
+                </div>
+
+            </div>
+            <div class="uk-container">
+                <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+                    13. Benennung der Probleme
+                </div><hr>
+                <div>
+                    <label><input class="uk-checkbox" type="checkbox"> Verweigerung der Abnahme<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Vertragsinhalte<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Qualitäten / Toleranzen<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Schnittstellen / Gewerke<br></label>
+                    <label><input class="uk-checkbox" type="checkbox" onclick="myTrue()"> Sonstiges: <br><textarea id="text" class="textarea" rows="4" cols="50"></textarea></label>
+                </div>
+
+            </div>
+
+            <div class="uk-container uk-margin-top">
+                <span class="weiter">
+                    <a class="uk-button uk-button-default" href="Fragebogen14.html" onclick="valCheckbox()">Weiter</a>
+                </span>
+
+                <span class="zuruck">
+                    <a class="uk-button uk-button-default" href="Fragebogen12.html">Zurück</a>
+                </span>
+            </div><br>
+        </div>   
+    </body>
+</html>
+
+
+
+
+
+
+

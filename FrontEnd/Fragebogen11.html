@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ausführung</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/css/uikit.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style\stylesheet.css"/>
+		<link rel="shortcut icon" href="https://goo.gl/1Um5tm" />
+		<script src="js\validate.js"></script>
+    </head>
+	
+    <body class="uk-background-muted">
+
+        <div class="overall"><br>
+            <div class="uk-container uk-heading-divider">
+                <span class="uk-text-large">Ausführung</span>
+
+
+                <div class="percbar">
+                    <progress class="uk-progress" value="10" max="20"></progress>
+                    <div class="percentage">50% (10/20)</div>
+                </div>
+
+            </div>
+            <div class="uk-container">
+                <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+                    11. Schadenursache
+                </div><hr>
+                <div>
+                    <label><input class="uk-checkbox" type="checkbox"> Planung<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Ausführung / Montage<br></label>
+                    <label><input class="uk-checkbox" type="checkbox"> Produkt / Material<br></label>
+                    <label><input class="uk-checkbox" type="checkbox" onclick="myTrue()"> Sonstiges: <br><textarea class="textarea" id="text" rows="4" cols="50" ></textarea></label>
+                </div>
+
+            </div>
+
+            <div class="uk-container uk-margin-top">
+                <span class="weiter">
+                    <a class="uk-button uk-button-default" href="Fragebogen12.html" onclick="valCheckbox()">Weiter</a>
+                </span>
+
+                <span class="zuruck">
+                    <a class="uk-button uk-button-default" href="Fragebogen10.html">Zurück</a>
+                </span>
+            </div><br>
+        </div>   
+    </body>
+</html>
+
+
+
+
+
+
+
