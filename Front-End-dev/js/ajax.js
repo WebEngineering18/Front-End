@@ -1,4 +1,6 @@
 var frage = 1;
+var letzteFrage = 3;
+var antworten = new Array();
 
 $(document).ready(function () {
     $("#next").click(function (e) {
@@ -7,18 +9,17 @@ $(document).ready(function () {
 });
 
 function sumbitForm() {
-
     if (frage == 1) {
-        var frage_1 = $("#frage_1 input:checkbox:checked").map(function () {
-            return $(this).val();
-        }).get();
-        console.log(frage_1);
+        antworten[1] = getCheckboxData();
+        console.log(antworten[1]);
     } else if (frage == 2) {
-        var frage_2 = $("#frage_2 input:radio:checked").map(function () {
-            return $(this).val();
-        }).get();
-        console.log(frage_2);
-    }else{
+        antworten[2] = getRadioData();
+        console.log(antworten[2]);
+    } else if (frage == 3) {
+        antworten[3] = getRadioData();
+        console.log(antworten[3]);
+        sendToServer(); //todo this if everything finish
+    } else {
 
     }
 
@@ -29,4 +30,36 @@ function nextQuestion() {
     $('#frage_' + frage).hide();
     frage++;
     $('#frage_' + frage).show();
+}
+
+function sendToServer() {
+    for (var i = 1; i <= letzteFrage; i++) {
+        $.ajax({
+            url: 'http://localhost/edit',
+            type: 'POST',
+            data: {
+                frage_id: i,
+                antwort: antworten[i]
+            },
+            error: function () {
+                console.log("Fehler aufgetreten!")
+            }
+            ,
+            success: function (data) {
+                console.log("Frage wurden an Server geschickt!")
+            }
+        });
+    }
+}
+
+function getCheckboxData() {
+    return $("#frage_" + frage + " input:checkbox:checked").map(function () {
+        return $(this).val();
+    }).get();
+}
+
+function getRadioData() {
+    return $("#frage_" + frage + " input:radio:checked").map(function () {
+        return $(this).val();
+    }).get();
 }
