@@ -1,35 +1,58 @@
-function valCheckbox() {
-                var checkBoxes = document.getElementsByClassName('uk-checkbox');
-                var isChecked = false;
-                for (var i = 0; i < checkBoxes.length; i++) {
-                    if (checkBoxes[i].checked) {
-                        isChecked = true;
-                        break; 
-                    }         
-                }
-                if (!isChecked) {
-                    alert('Sie muessen bei der ersten Frage mindestens ein Feld markieren!');
-                }
+var Siono = false;
+
+function myTrue(){
+	Siono = true;	
 }
 
-function sliderRange() {
+function myFunction(textito){
 	
-	var slider = document.getElementById("myRange");
-	var output = document.getElementById("demo");
-	
-	output.innerHTML = slider.value;
+	if (textito.value == ""){
+		alert("Enter the text");
+		textito.focus();
+	}
+		
 
-	slider.oninput = function() {
-		output.innerHTML = this.value;
+}
+
+function myFunc(){
+	
+	if(document.getElementById("val").value == ""){
+		alert("You have to enter the average");
+		document.getElementById("val").focus();
 	}
 }
 
-function valTextarea(){
-    if (document.getElementById("textarea2").value == ""){
-        alert("Enter the text");
-        document.getElementById("textarea2").focus();
-    }
-    else {
-        alert(document.getElementById("textarea2").value);
-    }
+function valCheckbox() {
+        var checkBoxes = document.getElementsByClassName('uk-checkbox');
+        var isChecked = false;
+        for (var i = 0; i < checkBoxes.length; i++) {
+            if (checkBoxes[i].checked) {
+                isChecked = true;
+				break;
+            }
+		}
+			
+        if (!isChecked) {
+            alert('Sie muessen bei der ersten Frage mindestens ein Feld markieren!');
+        }
+		
+		else{
+			if(Siono){
+				var texto = document.getElementById("text");
+				myFunction(texto);
+			}
+			else{
+				var texts = document.getElementsByClassName('textarea');
+				for(var i = 0; i < checkBoxes.length; i++){
+					if(checkBoxes[i].checked){
+						myFunction(texts[i]);
+					}
+				}
+			}
+		}
+				
 }
+
+	
+
+
