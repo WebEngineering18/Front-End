@@ -5,59 +5,85 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>Allgemeines</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/css/uikit.min.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit-icons.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style\stylesheet.css"/>
-		<link rel="shortcut icon" href="https://goo.gl/1Um5tm" />
-		<script src="js\validate.js"></script>
-        
-    </head>
-    <body class="uk-background-muted">
-
-        <div class="overall"><br>
-            <div class="uk-container uk-heading-divider">
-                <span class="uk-text-large">Allgemeines</span>
+<head>
+    <title>Allgemeines</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.22/css/uikit.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.24/js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style\stylesheet.css"/>
+    <link rel="shortcut icon" href="https://goo.gl/1Um5tm"/>
+    <script src="js\validate.js"></script>
+    <script src="js\ajax.js"></script>
 
 
-                <div class="percbar">
-                    <progress class="uk-progress" value="0" max="20"></progress>
-                    <div class="percentage">0% (0/20)</div>
-                </div>
+</head>
+<body class="uk-background-muted">
 
-            </div>
-            <div class="uk-container">
-                <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
-                    1. Fachbereich Ihres Unternehmens
-                </div><hr>
-                <div>
-                    <label><input class="uk-checkbox" type="checkbox"> Hoch- und Massivbau<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Fliesen und Naturstein<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Betonwerkstein, Fertigteile, Terrazzo und Naturstein<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Ausbau und Fassade<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Estrich und Belag<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Holzbau<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Wärme-, Kälte-, Schall- und Brandschutze<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Ausbau und Trockenbau<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Bauwerksabdichtung<br></label>
-                    <label><input class="uk-checkbox" type="checkbox"> Fassadenbau<br></label>
-                </div>
+<div class="overall"><br>
+    <div class="uk-container uk-heading-divider">
+        <span class="uk-text-large">Allgemeines</span>
+        <div class="percbar">
+            <progress class="uk-progress" value="0" max="20"></progress>
+            <div class="percentage">0% (0/20)</div>
+        </div>
+    </div>
 
-            </div>
+    <!-- Frage 1 -->
+    <div class="uk-container" id="frage_1">
+        <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+            1. Fachbereich Ihres Unternehmens
+        </div>
+        <hr>
+        <div>
+                <label><input class="uk-checkbox" type="checkbox" value="Hoch- und Massivbau"> Hoch- und
+                    Massivbau<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Fliesen und Naturstein"> Fliesen und Naturstein<br></label>
+                <label><input class="uk-checkbox" type="checkbox"
+                              value="Betonwerkstein, Fertigteile, Terrazzo und Naturstein"> Betonwerkstein, Fertigteile,
+                    Terrazzo und Naturstein<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Ausbau und Fassade"> Ausbau und
+                    Fassade<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Estrich und Belag"> Estrich und
+                    Belag<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Holzbau"> Holzbau<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Wärme-, Kälte-, Schall- und Brandschutze">
+                    Wärme-, Kälte-, Schall- und Brandschutze<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Ausbau und Trockenbau"> Ausbau und
+                    Trockenbau<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Bauwerksabdichtung">
+                    Bauwerksabdichtung<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Fassadenbau"> Fassadenbau<br></label>
+        </div>
+    </div>
 
-            <div class="uk-container uk-margin-top">
-                <span class="weiter">
-                    <a class="uk-button uk-button-default" href="Fragebogen2.html" onclick="valCheckbox()">Weiter</a>
+    <!-- Frage 2 -->
+    <div class="uk-container" id="frage_2" style="display: none;">
+        <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+            2. Tätig als
+        </div><hr>
+        <div>
+            <label><input class="uk-radio" type="radio" name="radio" checked value="Generalunternehmer"> Generalunternehmer<br></label>
+            <label><input class="uk-radio" type="radio" name="radio" value="Generalübernehmer"> Generalübernehmer<br></label>
+            <label><input class="uk-radio" type="radio" name="radio" value="Bauunternehmer"> Bauunternehmer<br></label>
+            <label><input class="uk-radio" type="radio" name="radio" value="Bauträger"> Bauträger<br></label>
+            <label><input class="uk-radio" type="radio" name="radio" value="Handwerksbetrieb"> Handwerksbetrieb</label>
+
+        </div>
+    </div>
+
+    <div class="uk-container uk-margin-top">
+                <span class="weiter" id="next">
+                    <a class="uk-button uk-button-default" onclick="valCheckbox()">Weiter</a>
                 </span>
 
-                <span class="zuruck">
+        <span class="zuruck" id="back">
                     <a class="uk-button uk-button-default" href="start.html">Zurück</a>
                 </span>
-            </div><br>
-        </div>   
-    </body>
+    </div>
+    <br>
+</div>
+</body>
 </html>
