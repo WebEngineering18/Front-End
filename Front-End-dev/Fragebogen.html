@@ -106,9 +106,14 @@ and open the template in the editor.
                        step="0.1">
             </div>
         </div>
-        <br>
+    </div>
 
-        <!--<p class="uk-form-label" for="form-h-range">Fremdplanung</p>-->
+   <!-- Frage 4 -->
+    <div class="uk-container" id="frage_5" style="display: none;">
+        <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+            4. Bauvorhaben / Projekte
+        </div>
+        <hr>
         <div class="slidecontainer">
             <p>Fremdplanung %</p>
             <div class="uk-form-controls uk-form-controls-text">
@@ -118,10 +123,26 @@ and open the template in the editor.
         </div>
     </div>
 
+    <!-- Frage 5 -->
+    <div class="uk-container" id="frage_6" style="display: none;">
+        <div class="uk-padding uk-padding-remove-left uk-padding-remove-bottom">
+            5. Festgestellte Planungsschäden, Anzahl insgesamt
+        </div><hr>
+        <div>
+
+            <label><input class="uk-checkbox" type="checkbox"> 2013-2017<br><textarea class="textarea" rows="2" cols="50" ></textarea></label><br>
+            <label><input class="uk-checkbox" type="checkbox"> 2013<br><textarea class="textarea" rows="2" cols="50" ></textarea></label><br>
+            <label><input class="uk-checkbox" type="checkbox"> 2014<br><textarea class="textarea" rows="2" cols="50" ></textarea></label><br>
+            <label><input class="uk-checkbox" type="checkbox"> 2015<br><textarea class="textarea" rows="2" cols="50" ></textarea></label><br>
+            <label><input class="uk-checkbox" type="checkbox"> 2016<br><textarea class="textarea" rows="2" cols="50" ></textarea></label><br>
+            <label><input class="uk-checkbox" type="checkbox"> 2017<br><textarea class="textarea" rows="2" cols="50" ></textarea></label>
+        </div>
+    </div>
 
     <div class="uk-container uk-margin-top">
                 <span class="weiter" id="next">
-                    <a class="uk-button uk-button-default" onclick="valCheckbox()">Weiter</a>
+                    <!--<a class="uk-button uk-button-default" onclick="valCheckbox()">Weiter</a>-->
+                    <a class="uk-button uk-button-default">Weiter</a>
                 </span>
 
         <span class="zuruck" id="back">
