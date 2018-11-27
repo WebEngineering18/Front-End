@@ -45,7 +45,7 @@ function sendToServer() {
     for (var i = 1; i <= letzteFrage; i++) {
         $.ajax({
             url: 'http://localhost/edit',
-            dataType: "jsonp",
+            dataType: "json",
             type: 'POST',
             data: {
                 frage_id: i,
