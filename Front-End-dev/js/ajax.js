@@ -5,7 +5,10 @@ var antworten = new Array();
 $(document).ready(function () {
     $("#next").click(function (e) {
         sumbitForm();
-    })
+    });
+    $("#back").click(function (e) {
+        prevQuestion();
+    });
 });
 
 function sumbitForm() {
@@ -29,6 +32,12 @@ function sumbitForm() {
 function nextQuestion() {
     $('#frage_' + frage).hide();
     frage++;
+    $('#frage_' + frage).show();
+}
+
+function prevQuestion() {
+    $('#frage_' + frage).hide();
+    frage--;
     $('#frage_' + frage).show();
 }
 
