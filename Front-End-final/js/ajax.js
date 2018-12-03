@@ -39,19 +39,19 @@ $(document).ready(function () {
     });
     $('#everyYearQ5').change(function () {
         $('#eachYearQ5').show();
-        $('#anzahlInsgesamtQ5').hide();
+        $('#input5').hide();
     });
     $('#allYearsQ5').change(function () {
-        $('#anzahlInsgesamtQ5').show();
+        $('#input5').show();
         $('#eachYearQ5').hide();
     });
     $('#allYearsQ9').change(function () {
-        $('#anzahlInsgesamtQ9').show();
+        $('#input9').show();
         $('#eachYearQ9').hide();
     });
     $('#everyYearQ9').change(function () {
         $('#eachYearQ9').show();
-        $('#anzahlInsgesamtQ9').hide();
+        $('#input9').hide();
     });
     $('#6_1_1').change(function () {
         $('#6_1').toggle();
@@ -89,62 +89,6 @@ function sumbitForm() {
 
 }
 
-function nextQuestion() {
-    if (frage == 1) {
-        validateQuestion1();
-    } else if (frage == 4) {
-        validateQuestion4();
-    } else if (frage == 5) {
-        validateQuestion5();
-    } else if (frage == 6) {
-        validateQuestion6();
-    } else if (frage == 7) {
-        validateQuestion7();
-    } else if (frage == 8) {
-        validateQuestion8();
-    } else if (frage == 9) {
-        validateQuestion9();
-    } else if (frage == 10) {
-        validateQuestion10();
-    } else if (frage == 11) {
-        validateQuestion11();
-    } else if (frage == 12) {
-        validateQuestion12();
-    } else if (frage == 13) {
-        validateQuestion13();
-    } else if (frage == 14) {
-        validateQuestion14();
-    } else if (frage == 15) {
-        validateQuestion15();
-    } else if (frage == 16) {
-        validateQuestion16();
-    } else if (frage == 17) {
-        validateQuestion17();
-    } else if (frage == 18) {
-        validateQuestion18();
-    }
-    else {
-        getNextQuestion();
-    }
-
-}
-
-function validateQuestion1() {
-    var checkBoxes = document.getElementsByClassName('cb1');
-    var isChecked = false;
-    for (var i = 0; i < checkBoxes.length; i++) {
-        if (checkBoxes[i].checked) {
-            isChecked = true;
-            break;
-        }
-    }
-    if (!isChecked) {
-        alert('Sie müssen mindestens ein Feld markieren!');
-    } else {
-        getNextQuestion();
-    }
-}
-
 function getNextQuestion() {
     $('#frage_' + frage).hide();
     frage++;
@@ -152,53 +96,48 @@ function getNextQuestion() {
     progressBarNext();
 }
 
-function validateQuestion4() {
-    let range = $("#range4").val();
-    let range2 = $("#range4_2").val();
-    let combined = +range + +range2;
-
-    if (combined == 100) {
+function nextQuestion() {
+    if (frage == 1) {
+        validateQuestionCB(frage);
+    } else if (frage == 4) {
+        validateQuestionRange(frage);
+    } else if (frage == 5) {
+        validateQuestionNumber(frage);
+    } else if (frage == 6) {
+        validateQuestionRange(frage);
+    } else if (frage == 7) {
+        validateQuestionNumber(frage);
+    } else if (frage == 8) {
+        validateQuestionCB(frage);
+    } else if (frage == 9) {
+        validateQuestionNumber(frage);
+    } else if (frage == 10) {
+        validateQuestionRange(frage);
+    } else if (frage == 11) {
+        validateQuestionCB(frage);
+    } else if (frage == 12) {
+        validateQuestionNumber(frage);
+    } else if (frage == 13) {
+        validateQuestionCB(frage);
+    } else if (frage == 14) {
+        validateQuestionRange(frage);
+    } else if (frage == 15) {
+        validateQuestionNumber(frage);
+    } else if (frage == 16) {
+        validateQuestionNumber(frage);
+    } else if (frage == 17) {
+        validateQuestionNumber(frage);
+    } else if (frage == 18) {
+        validateQuestionNumber(frage);
+    }
+    else {
         getNextQuestion();
-    } else {
-        alert("Beide Werte müssen zusammen 100 ergeben!");
     }
 
 }
 
-function validateQuestion5() {
-    if (!$("#anzahlInsgesamtQ5").val()) {
-        alert("Bitte geben Sie was ein!");
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion6() {
-    let range = $("#range6_1").val();
-    let range2 = $("#range6_2").val();
-    let range3 = $("#range6_3").val();
-    let range4 = $("#range6_4").val();
-
-    let combined = +range + +range2 + +range3 + +range4;
-
-    console.log(combined);
-    if (combined == 100) {
-        getNextQuestion();
-    } else {
-        alert("Alle Werte müssen zusammen 100 ergeben!");
-    }
-}
-
-function validateQuestion7() {
-    if (!$("#input7").val()) {
-        alert("Bitte geben Sie was ein!");
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion8() {
-    var checkBoxes = document.getElementsByClassName('cb8');
+function validateQuestionCB(curFrage) {
+    var checkBoxes = document.getElementsByClassName('cb' + curFrage);
     var isChecked = false;
     for (var i = 0; i < checkBoxes.length; i++) {
         if (checkBoxes[i].checked) {
@@ -213,117 +152,53 @@ function validateQuestion8() {
     }
 }
 
-function validateQuestion9() {
-    if (!$("#anzahlInsgesamtQ9").val()) {
+function validateQuestionNumber(input) {
+    if (!$("#input" + input).val()) {
         alert("Bitte geben Sie was ein!");
     } else {
         getNextQuestion();
     }
 }
 
-function validateQuestion10() {
-    let range = $("#range10").val();
-    console.log(range + typeof (range));
-    let range2 = $("#range10_2").val();
-    let range3 = $("#range10_3").val();
-    let range4 = $("#range10_4").val();
-    let range5 = $("#range10_5").val();
-    let range6 = $("#range10_6").val();
-    let range7 = $("#range10_7").val();
-    let range8 = $("#range10_8").val();
-    let range9 = $("#range10_9").val();
+function validateQuestionRange(frage) {
+    let combined;
+    let range, range2, range3, range4, range5, range6, range7, range8, range9;
 
-    let combined = +range + +range2 + +range3 + +range4 + +range5 + +range6 + +range7 + +range8 + +range9;
-    console.log(combined);
+    if (frage == 4) {
+        range = $("#range4").val();
+        range2 = $("#range4_2").val();
+
+        combined = +range + +range2;
+    } else if (frage == 6) {
+        range = $("#range6_1").val();
+        range2 = $("#range6_2").val();
+        range3 = $("#range6_3").val();
+        range4 = $("#range6_4").val();
+
+        combined = +range + +range2 + +range3 + +range4;
+    } else if (frage == 10) {
+        range = $("#range10").val();
+        range2 = $("#range10_2").val();
+        range3 = $("#range10_3").val();
+        range4 = $("#range10_4").val();
+        range5 = $("#range10_5").val();
+        range6 = $("#range10_6").val();
+        range7 = $("#range10_7").val();
+        range8 = $("#range10_8").val();
+        range9 = $("#range10_9").val();
+
+        combined = +range + +range2 + +range3 + +range4 + +range5 + +range6 + +range7 + +range8 + +range9;
+    } else if (frage == 14) {
+        range = $("#range14").val();
+        range2 = $("#range14_2").val();
+        range3 = $("#range14_3").val();
+
+        combined = +range + +range2 + +range3;
+    }
     if (combined == 100) {
         getNextQuestion();
     } else {
         alert("Alle Werte müssen zusammen 100 ergeben!");
-    }
-}
-
-function validateQuestion11() {
-    var checkBoxes = document.getElementsByClassName('cb11');
-    var isChecked = false;
-    for (var i = 0; i < checkBoxes.length; i++) {
-        if (checkBoxes[i].checked) {
-            isChecked = true;
-            break;
-        }
-    }
-    if (!isChecked) {
-        alert('Sie müssen mindestens ein Feld markieren!');
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion12() {
-    if (!$("#input12").val()) {
-        alert("Bitte geben Sie was ein!");
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion13() {
-    var checkBoxes = document.getElementsByClassName('cb13');
-    var isChecked = false;
-    for (var i = 0; i < checkBoxes.length; i++) {
-        if (checkBoxes[i].checked) {
-            isChecked = true;
-            break;
-        }
-    }
-    if (!isChecked) {
-        alert('Sie müssen mindestens ein Feld markieren!');
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion14() {
-    let range = $("#range14").val();
-    let range2 = $("#range14_2").val();
-    let range3 = $("#range14_3").val();
-
-    let combined = +range + +range2 + +range3;
-    if (combined == 100) {
-        getNextQuestion();
-    } else {
-        alert("Alle Werte müssen zusammen 100 ergeben!");
-    }
-}
-
-function validateQuestion15() {
-    if (!$("#input15").val()) {
-        alert("Bitte geben Sie was ein!");
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion16() {
-    if (!$("#input16").val()) {
-        alert("Bitte geben Sie was ein!");
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion17() {
-    if (!$("#input17").val()) {
-        alert("Bitte geben Sie was ein!");
-    } else {
-        getNextQuestion();
-    }
-}
-
-function validateQuestion18() {
-    if (!$("#input18").val()) {
-        alert("Bitte geben Sie was ein!");
-    } else {
-        getNextQuestion();
     }
 }
 
