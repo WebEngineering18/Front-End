@@ -97,40 +97,13 @@ function getNextQuestion() {
 }
 
 function nextQuestion() {
-    if (frage == 1) {
+    if (frage == 1 || frage == 8 || frage == 11 || frage == 13) {
         validateQuestionCB(frage);
-    } else if (frage == 4) {
+    } else if (frage == 4 || frage == 6 || frage == 10 || frage == 14) {
         validateQuestionRange(frage);
-    } else if (frage == 5) {
+    } else if (frage == 5 || frage == 7 || frage == 9 || frage == 12 || frage == 15 || frage == 16 || frage == 17 || frage == 18) {
         validateQuestionNumber(frage);
-    } else if (frage == 6) {
-        validateQuestionRange(frage);
-    } else if (frage == 7) {
-        validateQuestionNumber(frage);
-    } else if (frage == 8) {
-        validateQuestionCB(frage);
-    } else if (frage == 9) {
-        validateQuestionNumber(frage);
-    } else if (frage == 10) {
-        validateQuestionRange(frage);
-    } else if (frage == 11) {
-        validateQuestionCB(frage);
-    } else if (frage == 12) {
-        validateQuestionNumber(frage);
-    } else if (frage == 13) {
-        validateQuestionCB(frage);
-    } else if (frage == 14) {
-        validateQuestionRange(frage);
-    } else if (frage == 15) {
-        validateQuestionNumber(frage);
-    } else if (frage == 16) {
-        validateQuestionNumber(frage);
-    } else if (frage == 17) {
-        validateQuestionNumber(frage);
-    } else if (frage == 18) {
-        validateQuestionNumber(frage);
-    }
-    else {
+    } else {
         getNextQuestion();
     }
 
