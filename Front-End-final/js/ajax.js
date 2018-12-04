@@ -1,6 +1,8 @@
 var frage = 1;
-var letzteFrage = 3;
-var antworten = new Array();
+var letzteFrage = 20;
+var answers = {
+    data: []
+};
 var percentage = 0;
 var slider = 4;
 
@@ -69,22 +71,187 @@ $(document).ready(function () {
 });
 
 
-
 function sumbitForm() {
     if (frage == 1) {
-        antworten[1] = getCheckboxData();
-        console.log(antworten[1]);
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getCheckboxData()
+        });
     } else if (frage == 2) {
-        antworten[2] = getRadioData();
-        console.log(antworten[2]);
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getRadioData()
+        });
     } else if (frage == 3) {
-        antworten[3] = getRadioData();
-        console.log(antworten[3]);
-        sendToServer(); //todo this if everything finish
-    } else {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getRadioData()
+        });
+    } else if (frage == 4) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": {
+                "Eigenplanung": $('#input4').val() + "%",
+                "Fremdplanung": $('#input4_2').val() + "%",
+            }
+        });
+    }
+    else if (frage == 5) {
+        if ($('#allYearsQ5').is(':checked')) {
+            answers.data.push({
+                "querstion_id": frage,
+                "answer": {
+                    "2013 - 2017": $('#input5').val()
+                }
+            });
+        } else if ($('#everyYearQ5').is(':checked')) {
+            answers.data.push({
+                "querstion_id": frage,
+                "answer": {
+                    "2013": $('#input5_1').val(),
+                    "2014": $('#input5_2').val(),
+                    "2015": $('#input5_3').val(),
+                    "2016": $('#input5_4').val(),
+                    "2017": $('#input5_5').val(),
+                }
+            });
+        }
+    }
+    else if (frage == 6) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": {
+                "Entwurfsplanung": $('#input6_1').val() + "%",
+                "Genehmigungsplanung": $('#input6_2').val() + "%",
+                "Ausfuehrungsplanung": $('#input6_3').val() + "%",
+            }
+        });
+    }
+    else if (frage == 7) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": $('#input7').val()
+        });
+    }
+    else if (frage == 8) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getCheckboxData() //todo sonstiges text hinzufügen
+        });
+    }
+    else if (frage == 9) {
+        if ($('#allYearsQ9').is(':checked')) {
+            answers.data.push({
+                "querstion_id": frage,
+                "answer": {
+                    "2013 - 2017": $('#input9').val()
+                }
+            });
+        } else if ($('#everyYearQ9').is(':checked')) {
+            answers.data.push({
+                "querstion_id": frage,
+                "answer": {
+                    "2013": $('#input9_1').val(),
+                    "2014": $('#input9_2').val(),
+                    "2015": $('#input9_3').val(),
+                    "2016": $('#input9_4').val(),
+                    "2017": $('#input9_5').val(),
+                }
+            });
+        }
+    }
+    else if (frage == 10) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": {
+                "Baustelle": $('#input10').val() + "%",
+                "Erdberuehrte Bauteile": $('#input10_2').val() + "%",
+                "Gebaeudehuelle": $('#input10_3').val() + "%",
+                "Gebaeudeinnenbereich": $('#input10_4').val() + "%",
+                "Daemmung": $('#input10_5').val() + "%",
+                "Brandschutz": $('#input10_6').val() + "%",
+                "Luftdichte Ebene": $('#input10_7').val() + "%",
+                "Auszenanlagen, Terrassen": $('#input10_8').val() + "%",
+                "Haustechnik": $('#input10_7').val() + "%",
+            }
+        });
+    }
+    else if (frage == 11) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getCheckboxData()
+        });
+    }
+    else if (frage == 12) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": $('#input12').val()
+        });
+    }
+    else if (frage == 13) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getCheckboxData()
+        });
+    }
+    else if (frage == 14) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": {
+                "0-2 Jahre": $('#input14').val() + "%",
+                "3-4 Jahre": $('#input14_2').val() + "%",
+                "ab 5 Jahre": $('#input14_3').val() + "%",
+            }
+        });
+    }
+    else if (frage == 15) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": {
+                "2013 - 2017": $('#input15').val(), //todo andere Jahre einfügen
+            }
+        });
+    }
+    else if (frage == 16) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": {
+                "2013 - 2017": $('#input16').val(), //todo andere Jahre einfügen
+            }
+        });
+    }
+    else if (frage == 17) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer":  $('#input17').val()
+        });
+    }
+    else if (frage == 18) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": {
+                "2013 - 2017": $('#input18').val(), //todo andere Jahre einfügen
+            }
+        });
+    }
+    else if (frage == 19) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getRadioData()
+        });
+    }
+    else if (frage == 20) {
+        answers.data.push({
+            "querstion_id": frage,
+            "answer": getRadioData()
+        });
+    }
+    else {
 
     }
 
+    console.log(answers);
+    console.log(JSON.stringify(answers));
     nextQuestion();
 
 }
@@ -217,6 +384,10 @@ function getRadioData() {
     }).get();
 }
 
+function getNumberData(offset) {
+    return $("#frage_" + frage + " input").val();
+}
+
 function changeCategory() {
     if (frage < 4) {
         $("#category").html("Allgemeines");
@@ -258,6 +429,7 @@ function changeCategory() {
     }
 
 }
+
 function progressBarNext() {
     var progressValue = document.getElementById("progress");
     ++progressValue.value;
@@ -265,6 +437,7 @@ function progressBarNext() {
     percentage += 5;
     progressPercentage.innerHTML = percentage + "% (" + progressValue.value + "/20)";
 }
+
 function progressBarBack() {
     var progressValue = document.getElementById("progress");
     --progressValue.value;

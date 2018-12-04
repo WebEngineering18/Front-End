@@ -112,26 +112,21 @@ and open the template in the editor.
             <div class="uk-container">
                 <p>Eigenplanung [%]</p>
                 <div class="uk-align-left">
-                    <input id="range4" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range4" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input4" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider4_1()">Wert ändern</button>
-                </div>
+
             </div>
             <br>
             <div class="uk-container">
                 <p>Fremdplanung [%]</p>
                 <div class="uk-align-left">
-                    <input id="range4_2" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range4_2" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input4_2" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider4_2()">Wert ändern</button>
                 </div>
             </div>
         </div>
@@ -155,15 +150,15 @@ and open the template in the editor.
             </div>
             <div style="display:none;" id="eachYearQ5">
                 <span>2013 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input5_1"></label><br>
                 <span>2014 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input5_2"></label><br>
                 <span>2015 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input5_3"></label><br>
                 <span>2016 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input5_4"></label><br>
                 <span>2017 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input5_5"></label><br>
             </div>
 
 
@@ -183,13 +178,10 @@ and open the template in the editor.
             <div class="uk-container" id="6_1">
                 <p>Entwurfsplanung [%]:</p>
                 <div class="uk-align-left">
-                    <input id="range6_1" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range6_1" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input6_1" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider6_1()">Wert ändern</button>
                 </div>
 
             </div>
@@ -203,14 +195,12 @@ and open the template in the editor.
             <div class="uk-container" id="6_2">
                 <p>Genehmigungsplanung [%]:</p>
                 <div class="uk-align-left">
-                    <input id="range6_2" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range6_2" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input6_2" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider6_2()">Wert ändern</button>
-                </div>
+
 
             </div>
 
@@ -223,13 +213,10 @@ and open the template in the editor.
             <div class="uk-container" id="6_3">
                 <p>Ausführungsplanung [%]:</p>
                 <div class="uk-align-left">
-                    <input id="range6_3" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range6_3" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input6_3" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider6_3()">Wert ändern</button>
                 </div>
 
             </div>
@@ -243,13 +230,10 @@ and open the template in the editor.
             <div class="uk-container" id="6_4">
                 <p>Detailplanung [%]:</p>
                 <div class="uk-align-left">
-                    <input id="range6_4" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range6_4" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input6_4" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider6_4()">Wert ändern</button>
                 </div>
 
             </div>
@@ -270,14 +254,12 @@ and open the template in the editor.
             <div class="uk-container">
                 <p>Probleme bei der Vergabe [%]</p>
                 <div class="uk-align-left">
-                    <input id="range7" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range7" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input7" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider7()">Wert ändern</button>
-                </div>
+
             </div>
 
 
@@ -290,11 +272,11 @@ and open the template in the editor.
             </div>
             <hr>
             <div>
-                <label><input class="uk-checkbox cb8" type="checkbox"> europaweite Vergabe öffentlicher Aufträge <br></label>
-                <label><input class="uk-checkbox cb8" type="checkbox"> kommunale Auftragsvergabe<br></label>
-                <label><input class="uk-checkbox cb8" type="checkbox"> Rahmenverträge<br></label>
-                <label><input class="uk-checkbox cb8" type="checkbox"> mangelhafte Leistungsbeschreibungen<br></label>
-                <label><input class="uk-checkbox cb8" type="checkbox"> Sonstiges: <br><textarea class="uk-textarea"
+                <label><input class="uk-checkbox cb8" type="checkbox" value="Europaweite Vergabe öffentlicher Aufträge"> europaweite Vergabe öffentlicher Aufträge <br></label>
+                <label><input class="uk-checkbox cb8" type="checkbox" value="Kommunale Auftragsvergabe"> kommunale Auftragsvergabe<br></label>
+                <label><input class="uk-checkbox cb8" type="checkbox" value="Rahmenverträge"> Rahmenverträge<br></label>
+                <label><input class="uk-checkbox cb8" type="checkbox" value="Mangelhafte Leistungsbeschreibungen"> mangelhafte Leistungsbeschreibungen<br></label>
+                <label><input class="uk-checkbox cb8" type="checkbox" value="Sonstiges"> Sonstiges: <br><textarea class="uk-textarea"
                         rows="4"></textarea></label>
             </div>
 
@@ -319,15 +301,15 @@ and open the template in the editor.
             </div>
             <div style="display:none;" id="eachYearQ9">
                 <span>2013 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input9_1"></label><br>
                 <span>2014 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input9_2"></label><br>
                 <span>2015 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input9_3"></label><br>
                 <span>2016 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input9_4"></label><br>
                 <span>2017 : </span>
-                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"></label><br>
+                <label><input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;" id="input9_5"></label><br>
             </div>
 
 
@@ -343,113 +325,89 @@ and open the template in the editor.
             <div class="uk-container">
                 <p>Baustelle [Baustelleneinrichtung / Sicherheit]</p>
                 <div class="uk-align-left">
-                    <input id="range10" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input10" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_1()">Wert ändern</button>
-                </div>
+
             </div>
             <br>
             <div class="uk-container">
                 <p>Erdberührte Bauteile [Bodenplatte / Keller / Tiefgarage / Fundament / Gebäudeabdichtung / Sockel]</p>
                 <div class="uk-align-left">
-                    <input id="range10_2" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_2" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
-                    <input id="input10.2" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
+                    <input id="input10_2" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_2()">Wert ändern</button>
-                </div>
+
             </div>
             <br>
             <div class="uk-container">
                 <p>Gebäudehülle [Dach / Außenwände / Fenster / Türen / Wintergärten / Balkone]</p>
                 <div class="uk-align-left">
-                    <input id="range10_3" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_3" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
-                    <input id="input10.3" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_3()">Wert ändern</button>
+                    <input id="input10_3" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
             </div>
             <br>
             <div class="uk-container">
                 <p>Gebäudeinnenbereich [Decken / Fußböden / Estrich / Treppen / Innenwände / Innenputz / Innenausbau]</p>
                 <div class="uk-align-left">
-                    <input id="range10_4" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_4" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input10_4" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_4()">Wert ändern</button>
                 </div>
             </div>
             <div class="uk-container">
                 <p>Dämmung [Perimeterdämmung / Wärmedämmung / Schalldämmung]</p>
                 <div class="uk-align-left">
-                    <input id="range10_5" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_5" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
-                    <input id="input10.5" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_5()">Wert ändern</button>
+                    <input id="input10_5" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
             </div>
             <div class="uk-container">
                 <p>Brandschutz</p>
                 <div class="uk-align-left">
-                    <input id="range10_6" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_6" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
-                    <input id="input10.6" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_6()">Wert ändern</button>
+                    <input id="input10_6" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
             </div>
             <div class="uk-container">
                 <p>Luftdichte Ebene</p>
                 <div class="uk-align-left">
-                    <input id="range10_7" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_7" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
-                    <input id="input10.7" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_7()">Wert ändern</button>
+                    <input id="input10_7" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
             </div>
             <div class="uk-container">
                 <p>Außenanlagen, Terrassen</p>
                 <div class="uk-align-left">
-                    <input id="range10_8" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_8" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
-                    <input id="input10.8" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
+                    <input id="input10_8" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_8()">Wert ändern</button>
-                </div>
+
             </div>
             <div class="uk-container">
                 <p>Haustechnik [Heizung / Lüftung / Trinkwasserinstallation / Abwasserinstallation / Solarthermie /
                     Photovoltaik]</p>
                 <div class="uk-align-left">
-                    <input id="range10_9" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range10_9" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
-                    <input id="input10.9" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider10_9()">Wert ändern</button>
+                    <input id="input10_9" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
                 </div>
             </div>
         </div>
@@ -461,10 +419,10 @@ and open the template in the editor.
             </div>
             <hr>
             <div>
-                <label><input class="uk-checkbox cb11" type="checkbox"> Planung<br></label>
-                <label><input class="uk-checkbox cb11" type="checkbox"> Ausführung / Montage<br></label>
-                <label><input class="uk-checkbox cb11" type="checkbox"> Produkt / Material<br></label>
-                <label><input class="uk-checkbox cb11" type="checkbox"> Sonstiges <br></label>
+                <label><input class="uk-checkbox cb11" type="checkbox" value="Planung"> Planung<br></label>
+                <label><input class="uk-checkbox cb11" type="checkbox" value="Ausführung / Montage"> Ausführung / Montage<br></label>
+                <label><input class="uk-checkbox cb11" type="checkbox" value="Produkt / Material"> Produkt / Material<br></label>
+                <label><input class="uk-checkbox cb11" type="checkbox" value="Sonstiges"> Sonstiges <br></label>
             </div>
 
         </div>
@@ -479,13 +437,10 @@ and open the template in the editor.
             <div class="uk-container">
                 <p>bei [%] aller Bauvorhaben / Projekte</p>
                 <div class="uk-align-left">
-                    <input id="range12" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range12" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input12" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider12()">Wert ändern</button>
                 </div>
             </div>
 
@@ -499,11 +454,11 @@ and open the template in the editor.
             </div>
             <hr>
             <div>
-                <label><input class="uk-checkbox cb13" type="checkbox"> Verweigerung der Abnahme <br></label>
-                <label><input class="uk-checkbox cb13" type="checkbox"> Vertragsinhalte<br></label>
-                <label><input class="uk-checkbox cb13" type="checkbox"> Qualitäten / Toleranzen <br></label>
-                <label><input class="uk-checkbox cb13" type="checkbox"> Schnittstellen / Gewerke <br></label>
-                <label><input class="uk-checkbox cb13" type="checkbox"> Sonstiges: <br><textarea class="uk-textarea"
+                <label><input class="uk-checkbox cb13" type="checkbox" value="Verweigerung der Abnahme"> Verweigerung der Abnahme <br></label>
+                <label><input class="uk-checkbox cb13" type="checkbox" value="Vertragsinhalte"> Vertragsinhalte<br></label>
+                <label><input class="uk-checkbox cb13" type="checkbox" value="Qualitäten / Toleranzen"> Qualitäten / Toleranzen <br></label>
+                <label><input class="uk-checkbox cb13" type="checkbox" value="Schnittstellen / Gewerke"> Schnittstellen / Gewerke <br></label>
+                <label><input class="uk-checkbox cb13" type="checkbox" value="Sonstiges"> Sonstiges: <br><textarea class="uk-textarea"
                         rows="4"></textarea></label>
             </div>
 
@@ -519,37 +474,28 @@ and open the template in the editor.
             <div class="uk-container">
                 <p>nach 0 - 2 Jahren bei [%] aller Bauvorhaben / Projekte</p>
                 <div class="uk-align-left">
-                    <input id="range14" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range14" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input14" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider14()">Wert ändern</button>
                 </div>
             </div>
             <div class="uk-container">
                 <p>nach 3 - 5 Jahren bei [%] aller Bauvorhaben / Projekte</p>
                 <div class="uk-align-left">
-                    <input id="range14_2" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range14_2" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input14_2" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider14_2()">Wert ändern</button>
                 </div>
             </div>
             <div class="uk-container">
                 <p>nach über 5 Jahren bei [%] aller Bauvorhaben / Projekte</p>
                 <div class="uk-align-left">
-                    <input id="range14_3" class="uk-range" type="range" value="0" min="0" max="100" step="5" style="width:300px">
+                    <input id="range14_3" class="uk-range" type="range" value="0" min="0" max="100" step="1" style="width:300px">
                 </div>
                 <div class="uk-align-left">
                     <input id="input14_3" class="uk-input" type="number" placeholder="Wert in %" style="width:120px">
-                </div>
-                <div class="uk-align-left">
-                    <button class="uk-button uk-button-default" onclick="confirmSlider14_3()">Wert ändern</button>
                 </div>
             </div>
         </div>
@@ -677,11 +623,11 @@ and open the template in the editor.
             </div>
             <hr>
             <div>
-                <label><input class="uk-radio" type="radio" name="radio19" checked> deutlich verschlechtert<br></label>
-                <label><input class="uk-radio" type="radio" name="radio19"> verschlechtert<br></label>
-                <label><input class="uk-radio" type="radio" name="radio19"> gleich geblieben<br></label>
-                <label><input class="uk-radio" type="radio" name="radio19"> verbessert<br></label>
-                <label><input class="uk-radio" type="radio" name="radio19"> deutlich verbessert</label>
+                <label><input class="uk-radio" type="radio" name="radio19" checked value="deutlich verschlechtert"> deutlich verschlechtert<br></label>
+                <label><input class="uk-radio" type="radio" name="radio19" value="verschlechtert"> verschlechtert<br></label>
+                <label><input class="uk-radio" type="radio" name="radio19" value="gleich geblieben"> gleich geblieben<br></label>
+                <label><input class="uk-radio" type="radio" name="radio19" value="verbessert"> verbessert<br></label>
+                <label><input class="uk-radio" type="radio" name="radio19" value="deutlich verbessert"> deutlich verbessert</label>
 
             </div>
         </div>
@@ -694,11 +640,11 @@ and open the template in the editor.
             </div>
             <hr>
             <div>
-                <label><input class="uk-radio" type="radio" name="radio20" checked> deutlich verschlechtert<br></label>
-                <label><input class="uk-radio" type="radio" name="radio20"> verschlechtert<br></label>
-                <label><input class="uk-radio" type="radio" name="radio20"> gleich geblieben<br></label>
-                <label><input class="uk-radio" type="radio" name="radio20"> verbessert<br></label>
-                <label><input class="uk-radio" type="radio" name="radio20"> deutlich verbessert</label>
+                <label><input class="uk-radio" type="radio" name="radio20" checked value="deutlich verschlechtert"> deutlich verschlechtert<br></label>
+                <label><input class="uk-radio" type="radio" name="radio20" value="verschlechtert"> verschlechtert<br></label>
+                <label><input class="uk-radio" type="radio" name="radio20" value="gleich geblieben"> gleich geblieben<br></label>
+                <label><input class="uk-radio" type="radio" name="radio20" value="verbessert"> verbessert<br></label>
+                <label><input class="uk-radio" type="radio" name="radio20" value="deutlich verbessert"> deutlich verbessert</label>
 
             </div>
         </div>

@@ -1,112 +1,167 @@
-function confirmSlider4_1() {
-    let range = document.getElementById("range4");
-    let numberInput = document.getElementById("input4");
-    range.value = numberInput.value;
+$(document).ready(function () {
+    $("#range4").change(function () {
+        $("#input4").val(this.value);
+    });
+    $("#input4").change(function () {
+        $("#range4").val(this.value);
+    });
 
-}
+    $("#range4_2").change(function () {
+        $("#input4_2").val(this.value);
+    });
+    $("#input4_2").change(function () {
+        $("#range4_2").val(this.value);
+    });
 
-function confirmSlider4_2() {
-    let range = document.getElementById("range4_2");
-    let numberInput = document.getElementById("input4_2");
-    range.value = numberInput.value;
+    $("#range6_1").change(function () {
+        $("#input6_1").val(this.value);
+    });
+    $("#input6_1").change(function () {
+        $("#range6_1").val(this.value);
+    });
 
-}
+    $("#range6_2").change(function () {
+        $("#input6_2").val(this.value);
+    });
 
-function confirmSlider6_1() {
-    let range = document.getElementById("range6_1");
-    let numberInput = document.getElementById("input6_1");
-    range.value = numberInput.value;
-}
+    $("#input6_2").change(function () {
+        $("#range6_2").val(this.value);
+    });
 
-function confirmSlider6_2() {
-    let range = document.getElementById("range6_2");
-    let numberInput = document.getElementById("input6_2");
-    range.value = numberInput.value;
-}
+    $("#range6_3").change(function () {
+        $("#input6_3").val(this.value);
+    });
 
-function confirmSlider6_3() {
-    let range = document.getElementById("range6_3");
-    let numberInput = document.getElementById("input6_3");
-    range.value = numberInput.value;
-}
+    $("#input6_3").change(function () {
+        $("#range6_3").val(this.value);
+    });
 
-function confirmSlider6_4() {
-    let range = document.getElementById("range6_4");
-    let numberInput = document.getElementById("input6_4");
-    range.value = numberInput.value;
-}
+    $("#range6_4").change(function () {
+        $("#input6_4").val(this.value);
+    });
 
-function confirmSlider7() {
-    let range = document.getElementById("range7");
-    let numberInput = document.getElementById("input7");
-    range.value = numberInput.value;
-}
+    $("#input6_4").change(function () {
+        $("#range6_4").val(this.value);
+    });
 
-function confirmSlider10_1() {
-    let range = document.getElementById("range10");
-    let numberInput = document.getElementById("input10");
-    range.value = numberInput.value;
-}
-function confirmSlider10_2() {
-    let range = document.getElementById("range10.2");
-    let numberInput = document.getElementById("input10.2");
-    range.value = numberInput.value;
-}
-function confirmSlider10_3() {
-    let range = document.getElementById("range10.3");
-    let numberInput = document.getElementById("input10.3");
-    range.value = numberInput.value;
-}
-function confirmSlider10_4() {
-    let range = document.getElementById("range10.4");
-    let numberInput = document.getElementById("input10.4");
-    range.value = numberInput.value;
-}
-function confirmSlider10_5() {
-    let range = document.getElementById("range10.5");
-    let numberInput = document.getElementById("input10.5");
-    range.value = numberInput.value;
-}
-function confirmSlider10_6() {
-    let range = document.getElementById("range10.6");
-    let numberInput = document.getElementById("input10.6");
-    range.value = numberInput.value;
-}
-function confirmSlider10_7() {
-    let range = document.getElementById("range10.7");
-    let numberInput = document.getElementById("input10.7");
-    range.value = numberInput.value;
-}
-function confirmSlider10_8() {
-    let range = document.getElementById("range10.8");
-    let numberInput = document.getElementById("input10.8");
-    range.value = numberInput.value;
-}
-function confirmSlider10_9() {
-    let range = document.getElementById("range10.9");
-    let numberInput = document.getElementById("input10.9");
-    range.value = numberInput.value;
-}
-function confirmSlider12() {
-    let range = document.getElementById("range12");
-    let numberInput = document.getElementById("input12");
-    range.value = numberInput.value;
-}
+    $("#range7").change(function () {
+        $("#input7").val(this.value);
+    });
 
-function confirmSlider14() {
-    let range = document.getElementById("range14");
-    let numberInput = document.getElementById("input14");
-    range.value = numberInput.value;
-}
+    $("#input7").change(function () {
+        $("#range7").val(this.value);
+    });
 
-function confirmSlider14_2() {
-    let range = document.getElementById("range14_2");
-    let numberInput = document.getElementById("input14_2");
-    range.value = numberInput.value;
-}
+    $("#range10").change(function () {
+        $("#input10").val(this.value);
+    });
 
-function confirmSlider14_3() {
-    let range = document.getElementById("range14_3");
-    let numberInput = document.getElementById("input14_3");
-    range.value = numberInput.value;
-}
+    $("#input10").change(function () {
+        $("#range10").val(this.value);
+    });
+
+    $("#range10").change(function () {
+        $("#input10").val(this.value);
+    });
+
+    $("#input10").change(function () {
+        $("#range10").val(this.value);
+    });
+
+    $("#range10_2").change(function () {
+        $("#input10_2").val(this.value);
+    });
+
+    $("#input10_2").change(function () {
+        $("#range10_2").val(this.value);
+    });
+
+    $("#range10_3").change(function () {
+        $("#input10_3").val(this.value);
+    });
+
+    $("#input10_3").change(function () {
+        $("#range10_3").val(this.value);
+    });
+
+
+    $("#range10_4").change(function () {
+        $("#input10_4").val(this.value);
+    });
+
+    $("#input10_4").change(function () {
+        $("#range10_4").val(this.value);
+    });
+
+    $("#range10_5").change(function () {
+        $("#input10_5").val(this.value);
+    });
+
+    $("#input10_5").change(function () {
+        $("#range10_5").val(this.value);
+    });
+
+    $("#range10_6").change(function () {
+        $("#input10_6").val(this.value);
+    });
+
+    $("#input10_6").change(function () {
+        $("#range10_6").val(this.value);
+    });
+
+    $("#range10_7").change(function () {
+        $("#input10_7").val(this.value);
+    });
+
+    $("#input10_7").change(function () {
+        $("#range10_7").val(this.value);
+    });
+
+    $("#range10_8").change(function () {
+        $("#input10_8").val(this.value);
+    });
+
+    $("#input10_8").change(function () {
+        $("#range10_8").val(this.value);
+    });
+
+    $("#range10_9").change(function () {
+        $("#input10_9").val(this.value);
+    });
+
+    $("#input10_9").change(function () {
+        $("#range10_9").val(this.value);
+    });
+
+    $("#range12").change(function () {
+        $("#input12").val(this.value);
+    });
+
+    $("#input12").change(function () {
+        $("#range12").val(this.value);
+    });
+
+    $("#range14").change(function () {
+        $("#input14").val(this.value);
+    });
+
+    $("#input14").change(function () {
+        $("#range14").val(this.value);
+    });
+
+    $("#range14_2").change(function () {
+        $("#input14_2").val(this.value);
+    });
+
+    $("#input14_2").change(function () {
+        $("#range14_2").val(this.value);
+    });
+
+    $("#range14_3").change(function () {
+        $("#input14_3").val(this.value);
+    });
+
+    $("#input14_3").change(function () {
+        $("#range14_3").val(this.value);
+    });
+});
