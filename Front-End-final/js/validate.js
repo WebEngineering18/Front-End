@@ -37,6 +37,15 @@ function validateQuestionNumberXOR(frage) {
     }
 }
 
+function validateQuestionNumber(frage) {
+    if (!$("#input" + frage).val()) {
+        showError("Bitte geben Sie was ein!");
+    } else {
+        getNextQuestion();
+        removeDiv();
+    }
+}
+
 function validateQuestionRange(frage) {
     let combined;
     let validateCB;
