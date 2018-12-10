@@ -15,6 +15,23 @@ function validateQuestionCB(curFrage) {
     }
 }
 
+function validateQuestionRB(curFrage) {
+    var radioBoxes = document.getElementsByClassName('rb' + curFrage);
+    var isChecked = false;
+    for (var i = 0; i < radioBoxes.length; i++) {
+        if (radioBoxes[i].checked) {
+            isChecked = true;
+            break;
+        }
+    }
+    if (!isChecked) {
+        showError('Sie müssen ein Feld markieren!');
+    } else {
+        getNextQuestion();
+        removeDiv();
+    }
+}
+
 function validateQuestion6CB(curFrage) {
     var checkBoxes = document.getElementsByClassName('cb' + curFrage);
     var isChecked = true;

@@ -219,6 +219,8 @@ function nextQuestion() {
         validateQuestionNumber(frage);
     } else if (frage == 5 || frage == 9) {
         validateQuestionNumberXOR(frage);
+    } else if (frage == 2 || frage == 3 || frage == 19|| frage == 20) {
+        validateQuestionRB(frage);
     }
      else {
         getNextQuestion();
