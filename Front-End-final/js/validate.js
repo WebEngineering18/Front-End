@@ -15,6 +15,18 @@ function validateQuestionCB(curFrage) {
     }
 }
 
+function validateQuestion6CB(curFrage) {
+    var checkBoxes = document.getElementsByClassName('cb' + curFrage);
+    var isChecked = true;
+    for (var i = 0; i < checkBoxes.length; i++) {
+        if (!checkBoxes[i].checked) {
+            isChecked = false;
+            break;
+        }
+    }
+    return isChecked;
+}
+
 function validateQuestionNumberXOR(frage) {
     if (!$("#input" + frage).val() && (!$("#input" + frage + "_1").val() || !$("#input" + frage + "_2").val() || !$("#input" + frage + "_3").val()
         || !$("#input" + frage + "_4").val() || !$("#input" + frage + "_5").val())) {
@@ -27,6 +39,7 @@ function validateQuestionNumberXOR(frage) {
 
 function validateQuestionRange(frage) {
     let combined;
+    let validateCB;
     let range, range2, range3, range4, range5, range6, range7, range8, range9;
 
     if (frage == 4) {
@@ -41,6 +54,7 @@ function validateQuestionRange(frage) {
         range4 = $("#range6_4").val();
 
         combined = +range + +range2 + +range3 + +range4;
+        validateCB = validateQuestion6CB(frage);
     } else if (frage == 10) {
         range = $("#range10").val();
         range2 = $("#range10_2").val();
@@ -60,11 +74,12 @@ function validateQuestionRange(frage) {
 
         combined = +range + +range2 + +range3;
     }
-    if (combined == 100) {
+    if (combined == 100 || (frage == 6 && validateCB)) {
         getNextQuestion();
         removeDiv();
 
-    } else {
+    }
+     else {
         showError("Alle Werte müssen zusammen 100 ergeben!");
     }
 }
