@@ -11,6 +11,7 @@ function validateQuestionCB(curFrage) {
         showError('Sie müssen mindestens ein Feld markieren!');
     } else {
         getNextQuestion();
+        removeDiv();
     }
 }
 
@@ -19,6 +20,7 @@ function validateQuestionNumber(input) {
         showError("Bitte geben Sie was ein!");
     } else {
         getNextQuestion();
+        removeDiv();
     }
 }
 
@@ -59,13 +61,19 @@ function validateQuestionRange(frage) {
     }
     if (combined == 100) {
         getNextQuestion();
+        removeDiv();
+        
     } else {
         showError("Alle Werte müssen zusammen 100 ergeben!");
     }
 }
 
+function removeDiv() {
+    $(".uikit-alert").remove();
+}
+
 
 function showError(msg) {
-    var errorContainer = '<div class="uk-container" style="margin-top: 25px;"><div uk-alert class="uk-alert-danger">' + msg + '<a class="uk-alert-close" uk-close></a></div></div>';
+    var errorContainer = '<div class="uk-container uikit-alert" style="margin-top: 25px;"><div uk-alert class="uk-alert-danger">' + msg + '<a class="uk-alert-close" uk-close onclick="removeDiv();"></a></div></div>';
     $('.uk-heading-divider').after(errorContainer);
 }
