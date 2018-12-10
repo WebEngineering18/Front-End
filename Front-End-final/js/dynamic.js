@@ -33,11 +33,16 @@ $(document).ready(function () {
     });
     $('#everyYearQ5').change(function () {
         $('#eachYearQ5').show();
-        $('#input5').hide();
+        if (!$('#input5').val()) {
+            $('#input5').hide();
+        }
     });
     $('#allYearsQ5').change(function () {
         $('#input5').show();
-        $('#eachYearQ5').hide();
+        if (!$('#input5_1').val() || !$('#input5_2').val() || !$('#input5_3').val() || !$('#input5_4').val() || !$('#input5_5').val()) {
+            $('#eachYearQ5').hide();
+        }
+
     });
     $('#allYearsQ9').change(function () {
         $('#input9').show();
