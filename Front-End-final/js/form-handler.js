@@ -215,9 +215,12 @@ function nextQuestion() {
         validateQuestionCB(frage);
     } else if (frage == 4 || frage == 6 || frage == 10 || frage == 14) {
         validateQuestionRange(frage);
-    } else if (frage == 5 || frage == 7 || frage == 9 || frage == 12 || frage == 15 || frage == 16 || frage == 17 || frage == 18) {
+    } else if (frage == 7 || frage == 12 || frage == 15 || frage == 16 || frage == 17 || frage == 18) {
         validateQuestionNumber(frage);
-    } else {
+    } else if (frage == 5 || frage == 9) {
+        validateQuestionNumberXOR(frage);
+    }
+     else {
         getNextQuestion();
     }
 

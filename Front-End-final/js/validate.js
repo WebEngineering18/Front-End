@@ -15,8 +15,9 @@ function validateQuestionCB(curFrage) {
     }
 }
 
-function validateQuestionNumber(input) {
-    if (!$("#input" + input).val()) {
+function validateQuestionNumberXOR(frage) {
+    if (!$("#input" + frage).val() && (!$("#input" + frage + "_1").val() || !$("#input" + frage + "_2").val() || !$("#input" + frage + "_3").val()
+        || !$("#input" + frage + "_4").val() || !$("#input" + frage + "_5").val())) {
         showError("Bitte geben Sie was ein!");
     } else {
         getNextQuestion();
@@ -62,7 +63,7 @@ function validateQuestionRange(frage) {
     if (combined == 100) {
         getNextQuestion();
         removeDiv();
-        
+
     } else {
         showError("Alle Werte müssen zusammen 100 ergeben!");
     }
