@@ -10,6 +10,7 @@ function validateQuestionCB(curFrage) {
     if (!isChecked) {
         showError('Sie müssen mindestens ein Feld markieren!');
     } else {
+        submitForm();
         getNextQuestion();
         removeDiv();
     }
@@ -27,6 +28,7 @@ function validateQuestionRB(curFrage) {
     if (!isChecked) {
         showError('Sie müssen ein Feld markieren!');
     } else {
+        submitForm();
         getNextQuestion();
         removeDiv();
     }
@@ -49,6 +51,7 @@ function validateQuestionNumberXOR(frage) {
         || !$("#input" + frage + "_4").val() || !$("#input" + frage + "_5").val())) {
         showError("Bitte geben Sie was ein!");
     } else {
+        submitForm();
         getNextQuestion();
         removeDiv();
     }
@@ -58,6 +61,7 @@ function validateQuestionNumber(frage) {
     if (!$("#input" + frage).val()) {
         showError("Bitte geben Sie was ein!");
     } else {
+        submitForm();
         getNextQuestion();
         removeDiv();
     }
@@ -101,11 +105,12 @@ function validateQuestionRange(frage) {
         combined = +range + +range2 + +range3;
     }
     if (combined == 100 || (frage == 6 && validateCB)) {
+        submitForm();
         getNextQuestion();
         removeDiv();
 
     }
-     else {
+    else {
         showError("Alle Werte müssen zusammen 100 ergeben!");
     }
 }

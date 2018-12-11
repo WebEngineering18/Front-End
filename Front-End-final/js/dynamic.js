@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#next").click(function (e) {
-        sumbitForm();
+        validateQuestions();
         changeCategory();
     });
     $("#back").click(function (e) {
