@@ -93,7 +93,9 @@ window.onload = function () {
                         } else {
                             let check = 0;
                             this.answers[this.questionIndex - 1].answer.forEach(function (entry) {
-                                check = check + parseInt(entry);
+                                if (entry != "") {
+                                    check = check + parseInt(entry);
+                                }
                             });
                             if (check != 100) {
                                 this.errorMessage = "Alle Werte müssen zusammen 100 ergeben!";
@@ -138,6 +140,13 @@ window.onload = function () {
                 },
                 closeError: function (event) {
                     this.error = false;
+                },
+                resetAnswer: function (indexReset) {
+                    this.answers.forEach((el, index) => {
+                        if (index === indexReset) {
+                            el.answer = [];
+                        }
+                    });
                 }
             },
             watch: {

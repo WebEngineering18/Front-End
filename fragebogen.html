@@ -189,20 +189,20 @@
                     <div>
                         <input class="uk-radio" type="radio" name="radio"
                                v-model="answers[questionIndex-1].type"
-                               value="2013-2017">
+                               value="2013-2017" v-on:click="resetAnswer(questionIndex-1)">
                         <label>2013 - 2017</label>
                     </div>
 
                     <div class="uk-margin-top" v-if="answers[questionIndex-1].type == '2013-2017'">
                         <input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"
-                               v-model="answers[questionIndex-1].answer">
+                               v-model="answers[questionIndex-1].answer[0]">
                     </div>
                 </div>
 
                 <div style="float:left">
                     <div>
                         <input class="uk-radio" type="radio" name="radio" v-model="answers[questionIndex-1].type"
-                               value="everyYear">
+                               value="everyYear" v-on:click="resetAnswer(questionIndex-1)">
                         <label>jedes Jahr einzeln</label><br><br>
                     </div>
                     <div v-if="answers[questionIndex-1].type == 'everyYear'">
@@ -401,7 +401,7 @@
                 <div style="float:left" class="uk-margin-right">
                     <div>
                         <input class="uk-radio" type="radio" name="radio"
-                               v-model="answers[questionIndex-1].type"
+                               v-model="answers[questionIndex-1].type" v-on:click="resetAnswer(questionIndex-1)"
                                value="2013-2017">
                         <label>2013 - 2017</label>
                     </div>
@@ -415,7 +415,7 @@
                 <div style="float:left">
                     <div>
                         <input class="uk-radio" type="radio" name="radio" v-model="answers[questionIndex-1].type"
-                               value="everyYear">
+                               value="everyYear" v-on:click="resetAnswer(questionIndex-1)">
                         <label>jedes Jahr einzeln</label><br><br>
                     </div>
                     <div v-if="answers[questionIndex-1].type == 'everyYear'">
@@ -586,10 +586,10 @@
                     </p>
                     <div class="uk-column-1-2">
                         <div>
-                            <input class="uk-range" type="range" value="0" min="0" max="100" step="1">
+                            <input class="uk-range" type="range" value="0" min="0" max="100" step="1" v-model="answers[questionIndex-1].answer[8]">
                         </div>
                         <div>
-                            <input class="uk-input" type="number" placeholder="Wert in %">
+                            <input class="uk-input" type="number" placeholder="Wert in %" v-model="answers[questionIndex-1].answer[8]">
                         </div>
                     </div>
                 </div>
@@ -937,6 +937,4 @@
     </div>
 </div>
 </body>
-
 </html>
-
