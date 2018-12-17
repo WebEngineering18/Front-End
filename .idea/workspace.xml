@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="146c0113-8a84-4f8d-8b05-64bc270f2c57" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fragebogen.html" beforeDir="false" afterPath="$PROJECT_DIR$/fragebogen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/fragebogen.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fragebogen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -243,12 +242,12 @@
       <workItem from="1543942454676" duration="4236000" />
       <workItem from="1543957659730" duration="1951000" />
       <workItem from="1544354235545" duration="2271000" />
-      <workItem from="1545055948488" duration="1364000" />
+      <workItem from="1545055948488" duration="1407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35033000" />
+    <option name="totallyTimeSpent" value="35076000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -272,7 +271,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2647374" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2636656" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
