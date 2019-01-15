@@ -46,44 +46,37 @@
             </div>
             <hr>
             <div>
-                <input class="uk-checkbox" type="checkbox" value="Hoch- und Massivbau"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Hoch- und Massivbau<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Hoch- und Massivbau" v-model="answers[questionIndex-1].answer">
+                    Hoch- und Massivbau<br></label>
 
-                <input class="uk-checkbox" type="checkbox" value="Fliesen und Naturstein"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Fliesen und Naturstein<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Fliesen und Naturstein" v-model="answers[questionIndex-1].answer">
+                    Fliesen und Naturstein<br></label>
 
-                <input class="uk-checkbox" type="checkbox"
-                       value="Betonwerkstein, Fertigteile, Terrazzo und Naturstein"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Betonwerkstein, Fertigteile, Terrazzo und Naturstein<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Betonwerkstein, Fertigteile, Terrazzo und Naturstein"
+                              v-model="answers[questionIndex-1].answer">
+                    Betonwerkstein, Fertigteile, Terrazzo und Naturstein<br></label>
 
-                <input class="uk-checkbox" type="checkbox" value="Ausbau und Fassade"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Ausbau und Fassade<br></label>
-                <input class="uk-checkbox" type="checkbox" value="Estrich und Belag"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Estrich und Belag<br></label>
-                <input class="uk-checkbox" type="checkbox" value="Holzbau"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Holzbau<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Ausbau und Fassade" v-model="answers[questionIndex-1].answer">
+                    Ausbau und Fassade<br></label>
 
-                <input class="uk-checkbox" type="checkbox" value="Wärme-, Kälte-, Schall- und Brandschutze"
-                       v-model="answers[questionIndex-1].answer">
-                <label> Wärme-, Kälte-, Schall- und Brandschutze<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Estrich und Belag" v-model="answers[questionIndex-1].answer">
+                    Estrich und Belag<br></label>
 
-                <input class="uk-checkbox" type="checkbox" value="Ausbau und Trockenbau"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Ausbau und Trockenbau<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Holzbau" v-model="answers[questionIndex-1].answer">
+                    Holzbau<br></label>
 
-                <input class="uk-checkbox" type="checkbox" value="Bauwerksabdichtung"
-                       v-model="answers[questionIndex-1].answer">
-                <label>Bauwerksabdichtung<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Wärme-, Kälte-, Schall- und Brandschutz"
+                              v-model="answers[questionIndex-1].answer">
+                    Wärme-, Kälte-, Schall- und Brandschutz<br></label>
 
-                <input class="uk-checkbox" type="checkbox" value="Fassadenbau"
-                       v-model="answers[questionIndex-1].answer">
-                <label> Fassadenbau<br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Ausbau und Trockenbau" v-model="answers[questionIndex-1].answer">
+                    Ausbau und Trockenbau<br></label>
+
+                <label><input class="uk-checkbox" type="checkbox" value="Bauwerksabdichtung" v-model="answers[questionIndex-1].answer">
+                    Bauwerksabdichtung<br></label>
+
+                <label><input class="uk-checkbox" type="checkbox" value="Fassadenbau" v-model="answers[questionIndex-1].answer">
+                    Fassadenbau<br></label>
             </div>
         </div>
 
@@ -626,10 +619,8 @@
                 <label><input class="uk-checkbox" type="checkbox" value="Produkt / Material"
                               v-model="answers[questionIndex-1].answer">
                     Produkt / Material<br></label>
-
-                <label><input class="uk-checkbox" type="checkbox" value="Sonstiges"
-                              v-model="answers[questionIndex-1].answer">
-                    Sonstiges <br></label>
+                <label><input class="uk-checkbox" type="checkbox" value="Sonstiges" v-model="answers[questionIndex-1].answer">
+                    Sonstiges<br></label>
             </div>
 
         </div>
@@ -678,10 +669,9 @@
                 <label><input class="uk-checkbox" type="checkbox" value="Schnittstellen / Gewerke"
                               v-model="answers[questionIndex-1].answer">
                     Schnittstellen / Gewerke <br></label>
-
                 <label><input class="uk-checkbox" type="checkbox" value="Sonstiges"
                               v-model="answers[questionIndex-1].answer"  @click="toogleOtherText()">
-                    Sonstiges: <br></label>
+                    Sonstiges<br></label>
                 <textarea :disabled="otherTextStatus == false"  class="uk-textarea" rows="4" v-model="answers[questionIndex-1].other"></textarea>
             </div>
 
@@ -752,7 +742,7 @@
 
             <div class="uk-margin-top" v-if="answers[questionIndex-1].answer[0]">
                 <div class="uk-margin-bottom">
-                    <span>jedes Jahr einzeln</span>
+                    <span>Wollen Sie auch jedes Jahr einzeln eingeben?</span>
                 </div>
                 <span>2013 : </span>
                 <input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"
@@ -792,7 +782,7 @@
 
             <div class="uk-margin-top" v-if="answers[questionIndex-1].answer[0]">
                 <div class="uk-margin-bottom">
-                    <span>jedes Jahr einzeln</span>
+                    <span>Wollen Sie auch jedes Jahr einzeln eingeben?</span>
                 </div>
                 <span>2013 : </span>
                 <input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"
@@ -848,7 +838,7 @@
 
             <div class="uk-margin-top" v-if="answers[questionIndex-1].answer[0]">
                 <div class="uk-margin-bottom">
-                    <span>jedes Jahr einzeln</span>
+                    <span>Wollen Sie auch jedes Jahr einzeln eingeben?</span>
                 </div>
                 <span>2013 : </span>
                 <input class="uk-input" type="number" placeholder="Anzahl" style="width:120px;"
@@ -937,7 +927,7 @@
             <span class="weiter" v-on:click="next" v-if="questionIndex == 20">
                     <a class="uk-button uk-button-default">Beenden</a>
                 </span>
-            <span class="zuruck" v-on:click="back" v-if="questionIndex != 1">
+            <span class="zuruck" v-on:click="back" v-if="questionIndex != 1 && questionIndex != 21">
                     <a class="uk-button uk-button-default">Zurück</a>
                 </span>
         </div>
