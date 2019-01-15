@@ -2,14 +2,12 @@ window.onload = function () {
     var app = new Vue({
             el: '#fragebogen',
             data: {
-                questionIndex: 1,
+                questionIndex: 11,
                 answers: [
                     {question_id: 1, answer: [], type: "checkbox"}, //checkbox
                     {question_id: 2, answer: [], type: "radio"}, //radio
                     {question_id: 3, answer: [], type: "radio"}, //radio
-                    {
-                        question_id: 4, answer: ["0", "0"], type: "100%"
-                    }, //2 numbers
+                    {question_id: 4, answer: ["0", "0"], type: "100%"}, //2 numbers
                     {question_id: 5, answer: [], type: "year-choose"}, //every year or all years
                     {question_id: 6, answer: ["0", "0", "0", "0"], no_answer: [], type: "100%"}, //4 numbers choose
                     {question_id: 7, answer: [], type: "number"}, //number
@@ -95,8 +93,10 @@ window.onload = function () {
                         } else {
                             let check = 0;
                             this.answers[this.questionIndex - 1].answer.forEach(function (entry) {
-                                if (entry != "") {
-                                    check = check + parseInt(entry);
+                                if (entry != "Ohne") {
+                                    if (entry != "") {
+                                        check = check + parseInt(entry);
+                                    }
                                 }
                             });
                             if (check != 100) {
@@ -154,20 +154,22 @@ window.onload = function () {
                         }
                     });
                 },
-                toogleOtherText: function() {
-                    if(this.otherTextStatus === false){
+                toogleOtherText: function () {
+                    if (this.otherTextStatus === false) {
                         this.otherTextStatus = true;
-                    }else{
+                    } else {
                         this.otherTextStatus = false;
                     }
                 },
                 checkOtherText: function () {
-                    if (this.answers[this.questionIndex - 1].other != ""  && Array.isArray(this.answers[this.questionIndex - 1].answer)) {
-                        this.answers[this.questionIndex - 1].answer.forEach((el, index) => {
-                            if (el === "Sonstiges") {
-                                this.answers[this.questionIndex - 1].answer[index] = this.answers[this.questionIndex - 1].other;
-                            }
-                        });
+                    if (this.answers[this.questionIndex - 1].hasOwnProperty('other')) {
+                        if (this.answers[this.questionIndex - 1].other != "" && Array.isArray(this.answers[this.questionIndex - 1].answer)) {
+                            this.answers[this.questionIndex - 1].answer.forEach((el, index) => {
+                                if (el === "Sonstiges") {
+                                    this.answers[this.questionIndex - 1].answer[index] = this.answers[this.questionIndex - 1].other;
+                                }
+                            });
+                        }
                     }
                 },
                 noAnswer: function (question_index, answer_index) {
