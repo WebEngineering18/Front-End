@@ -2,22 +2,24 @@ window.onload = function () {
     var app = new Vue({
             el: '#fragebogen',
             data: {
-                questionIndex: 1,
+                questionIndex: 14,
                 answers: [
                     {question_id: 1, answer: [], type: "checkbox"}, //checkbox
                     {question_id: 2, answer: [], type: "radio"}, //radio
                     {question_id: 3, answer: [], type: "radio"}, //radio
-                    {question_id: 4, answer: [], type: "100%"}, //2 numbers
+                    {
+                        question_id: 4, answer: ["0", "0"], type: "100%"
+                    }, //2 numbers
                     {question_id: 5, answer: [], type: "year-choose"}, //every year or all years
-                    {question_id: 6, answer: [], no_answer: [], type: "100%"}, //4 numbers choose
+                    {question_id: 6, answer: ["0", "0", "0", "0"], no_answer: [], type: "100%"}, //4 numbers choose
                     {question_id: 7, answer: [], type: "number"}, //number
                     {question_id: 8, answer: [], other: "", type: "checkbox"}, //checkbox with other text
                     {question_id: 9, answer: [], type: "year-choose"}, //every year or all years
-                    {question_id: 10, answer: [], type: "100%"}, //2 numbers
+                    {question_id: 10, answer: ["0", "0", "0", "0", "0", "0", "0", "0", "0"], type: "100%"}, //2 numbers
                     {question_id: 11, answer: [], type: "checkbox"}, //checkbox
                     {question_id: 12, answer: [], type: "number"}, //checkbox
                     {question_id: 13, answer: [], other: "", type: "checkbox"}, //checkbox with other text
-                    {question_id: 14, answer: [], type: "100%"}, //3 numbers
+                    {question_id: 14, answer: ["0", "0", "0"], type: "100%"}, //3 numbers
                     {question_id: 15, answer: [], type: "number"}, //all years and every year
                     {question_id: 16, answer: [], type: "number"}, //all years and every year
                     {question_id: 17, answer: [], type: "number"}, //number
@@ -26,6 +28,7 @@ window.onload = function () {
                     {question_id: 20, answer: [], type: "radio"}, //radio
                 ],
                 headline: 'Allgemeines',
+                otherTextStatus: false,
                 errorMessage: "",
                 error: false,
             },
@@ -48,7 +51,6 @@ window.onload = function () {
                     const body = JSON.stringify(
                         this.answers
                     );
-                    console.log(body);
 
                     const config = {
                         headers: {'Content-Type': 'application/json; charset=utf-8'},
@@ -137,6 +139,10 @@ window.onload = function () {
                             this.error = false;
                         }
                     }
+
+                    //data format improvments for database
+                    this.checkOtherText();
+                    this.otherTextStatus = false;
                 },
                 closeError: function (event) {
                     this.error = false;
@@ -145,6 +151,29 @@ window.onload = function () {
                     this.answers.forEach((el, index) => {
                         if (index === indexReset) {
                             el.answer = [];
+                        }
+                    });
+                },
+                toogleOtherText: function() {
+                    if(this.otherTextStatus === false){
+                        this.otherTextStatus = true;
+                    }else{
+                        this.otherTextStatus = false;
+                    }
+                },
+                checkOtherText: function () {
+                    if (this.answers[this.questionIndex - 1].other != ""  && Array.isArray(this.answers[this.questionIndex - 1].answer)) {
+                        this.answers[this.questionIndex - 1].answer.forEach((el, index) => {
+                            if (el === "Sonstiges") {
+                                this.answers[this.questionIndex - 1].answer[index] = this.answers[this.questionIndex - 1].other;
+                            }
+                        });
+                    }
+                },
+                noAnswer: function (question_index, answer_index) {
+                    this.answers.forEach((el, index) => {
+                        if (index === question_index) {
+                            el.answer[answer_index] = "Ohne";
                         }
                     });
                 }
