@@ -22,7 +22,7 @@
 <body class="uk-background-muted">
 <div id="fragebogen">
 
-    <div class="overall"><br>
+    <div class="overall" id="content"><br>
         <div class="uk-container uk-heading-divider">
             <span class="uk-text-large" id="category">{{headline}}</span>
 
@@ -40,9 +40,8 @@
         </div>
 
         <div v-if="!checkAviable">
-            <div class="uk-padding uk-container">
-                <p class="uk-text-center">Der Fragebogen ist nicht mehr gültig und kann nicht mehr beantwortet werden.</p>
-            </div>
+            <div class="uk-padding uk-container"><p class="uk-text-center">Der Fragebogen ist nicht mehr gültig und kann
+                nicht mehr beantwortet werden.</p></div>
         </div>
 
         <div v-else>
@@ -406,14 +405,16 @@
                         Mangelhafte Leistungsbeschreibungen<br></label>
 
                     <label><input class="uk-checkbox" type="checkbox" value="Sonstiges"
-                                  v-model="answers[questionIndex-1].answer" @click="toogleOtherText()">
+                                  v-model="answers[questionIndex-1].answer"
+                                  @click="toogleOtherText()">
                         Sonstiges<br></label>
 
                     <div>
-                        <textarea :disabled="otherTextStatus == false" class="uk-textarea" rows="4"
-                                  v-model="answers[questionIndex-1].other"></textarea>
+                    <textarea :disabled="otherTextStatus == false" class="uk-textarea" rows="4"
+                              v-model="answers[questionIndex-1].other"
+                              v-on:input="checkTextLimit()"></textarea>
+                        <p class="uk-text-meta help-text">{{ instructionText }}</p>
                     </div>
-
                 </div>
 
             </div>
@@ -701,10 +702,16 @@
                                   v-model="answers[questionIndex-1].answer">
                         Schnittstellen / Gewerke <br></label>
                     <label><input class="uk-checkbox" type="checkbox" value="Sonstiges"
-                                  v-model="answers[questionIndex-1].answer" @click="toogleOtherText()">
+                                  v-model="answers[questionIndex-1].answer"
+                                  @click="toogleOtherText()">
                         Sonstiges<br></label>
+
+                    <div>
                     <textarea :disabled="otherTextStatus == false" class="uk-textarea" rows="4"
-                              v-model="answers[questionIndex-1].other"></textarea>
+                              v-model="answers[questionIndex-1].other"
+                              v-on:input="checkTextLimit()"></textarea>
+                        <p class="uk-text-meta help-text">{{ instructionText }}</p>
+                    </div>
                 </div>
 
             </div>
@@ -942,19 +949,19 @@
                     <label><input class="uk-radio" type="radio" name="radio" value="Deutlich verbessert"
                                   v-model="answers[questionIndex-1].answer">
                         Deutlich verbessert</label>
+
                 </div>
             </div>
-        </div>
-
-        <!-- Ende -->
-        <div class="uk-container uk-margin-top" v-if="questionIndex == 21">
-            <h2 class="uk-text-center uk-margin-top">Vielen Dank für Ihre Antworten!</h2><br>
+            <!-- Ende -->
+            <div class="uk-container uk-margin-top" v-if="questionIndex == 21">
+                <h2 class="uk-text-center uk-margin-top">Vielen Dank für Ihre Antworten!</h2><br>
+            </div>
         </div>
 
         <hr>
 
         <div class="uk-container uk-margin-top" id="buttons">
-                <span class="weiter" v-on:click="next" v-if="questionIndex < 20 && checkAviable">
+                <span class="weiter" v-on:click="next" v-if="questionIndex < 20">
                     <a class="uk-button uk-button-default">Weiter</a>
                 </span>
             <span class="weiter" v-on:click="next" v-if="questionIndex == 20">
@@ -964,9 +971,14 @@
                     <a class="uk-button uk-button-default">Zurück</a>
                 </span>
         </div>
-
         <br>
     </div>
+
+    <div class="uk-container uk-text-center uk-margin-bottom" id="footer">
+        <a class="uk-link-text" href="impressum.html" style="margin-right: 5px;">Impressum</a>
+        <a class="uk-link-text" href="datenschutzerklärung.html" style="margin-left: 5px;">Datenschutzerklärung</a>
+    </div>
+
 </div>
 </body>
 

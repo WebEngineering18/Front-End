@@ -2,7 +2,7 @@ window.onload = function () {
     var app = new Vue({
             el: '#fragebogen',
             data: {
-                questionIndex: 1,
+                questionIndex: 8,
                 answers: [
                     {question_id: 1, answer: [], type: "checkbox"}, //checkbox
                     {question_id: 2, answer: [], type: "radio"}, //radio
@@ -29,7 +29,9 @@ window.onload = function () {
                 otherTextStatus: false,
                 errorMessage: "",
                 error: false,
-                endDate: "2019-02-30"
+                endDate: "2019-02-30",
+                textLimit: 150,
+                instructionText: ""
             },
             methods: {
                 next: function (event) {
@@ -143,6 +145,7 @@ window.onload = function () {
 
                     //data format improvments for database
                     this.checkOtherText();
+                    this.instructionText = "";
                     this.otherTextStatus = false;
                 },
                 closeError: function (event) {
@@ -180,10 +183,20 @@ window.onload = function () {
                         }
                     });
                 },
-
+                checkTextLimit: function () {
+                    if (this.answers[this.questionIndex - 1].hasOwnProperty('other')) {
+                        this.answers.forEach((el, index) => {
+                            if (index === this.questionIndex - 1) {
+                                let remaining = this.textLimit - el.other.length <= 0 ? 0 : this.textLimit - el.other.length;
+                                this.instructionText = remaining + ' Zeichen übrig';
+                                el.other = el.other.substr(0, this.textLimit);
+                            }
+                        });
+                    }
+                },
             },
             computed: {
-                checkAviable() {
+                checkAviable: function () {
                     const endDate = new Date(this.endDate);
                     const currentDate = new Date();
                     return endDate > currentDate;
