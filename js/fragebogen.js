@@ -2,7 +2,7 @@ window.onload = function () {
     var app = new Vue({
             el: '#fragebogen',
             data: {
-                questionIndex: 8,
+                questionIndex: 1,
                 answers: [
                     {question_id: 1, answer: [], type: "checkbox"}, //checkbox
                     {question_id: 2, answer: [], type: "radio"}, //radio
