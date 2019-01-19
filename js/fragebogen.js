@@ -29,6 +29,7 @@ window.onload = function () {
                 otherTextStatus: false,
                 errorMessage: "",
                 error: false,
+                endDate: "2019-02-30"
             },
             methods: {
                 next: function (event) {
@@ -178,7 +179,15 @@ window.onload = function () {
                             el.answer[answer_index] = "Ohne";
                         }
                     });
-                }
+                },
+
+            },
+            computed: {
+                checkAviable() {
+                    const endDate = new Date(this.endDate);
+                    const currentDate = new Date();
+                    return endDate > currentDate;
+                },
             },
             watch: {
                 questionIndex: function () {

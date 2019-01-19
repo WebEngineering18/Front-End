@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="146c0113-8a84-4f8d-8b05-64bc270f2c57" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragebogen.html" beforeDir="false" afterPath="$PROJECT_DIR$/fragebogen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/fragebogen.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fragebogen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+            <state relative-caret-position="270">
+              <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -26,8 +27,8 @@
       <file leaf-file-name="fragebogen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fragebogen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7524">
-              <caret line="418" column="38" selection-start-line="418" selection-start-column="28" selection-end-line="418" selection-end-column="38" />
+            <state relative-caret-position="570">
+              <caret line="962" column="89" selection-start-line="962" selection-start-column="89" selection-end-line="962" selection-end-column="89" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -92,8 +93,8 @@
       <file leaf-file-name="fragebogen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/fragebogen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            <state relative-caret-position="716">
+              <caret line="193" column="41" lean-forward="true" selection-start-line="193" selection-start-column="41" selection-end-line="193" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -139,6 +140,7 @@
       <find>HEAD</find>
       <find>wollen sie</find>
       <find>jedes jAhr</find>
+      <find>checkAviable</find>
     </findStrings>
     <replaceStrings>
       <replace>step=&quot;1&quot;</replace>
@@ -167,6 +169,7 @@
         <option value="$PROJECT_DIR$/Front-End-final/js/form-handler.js" />
         <option value="$PROJECT_DIR$/FrontEndVue/fragebogen.html" />
         <option value="$PROJECT_DIR$/FrontEndVue/js/fragebogen.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/fragebogen.html" />
         <option value="$PROJECT_DIR$/js/fragebogen.js" />
       </list>
@@ -181,7 +184,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="826" />
@@ -192,6 +195,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,11 +203,20 @@
               <item name="Front-End" type="b2602c69:ProjectViewProjectNode" />
               <item name="Front-End" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Front-End" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front-End" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,12 +269,13 @@
       <workItem from="1545147098755" duration="838000" />
       <workItem from="1547557407002" duration="4592000" />
       <workItem from="1547563903783" duration="276000" />
-      <workItem from="1547564239192" duration="3000" />
+      <workItem from="1547564239192" duration="404000" />
+      <workItem from="1547911682983" duration="1889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44805000" />
+    <option name="totallyTimeSpent" value="47095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,19 +287,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="826" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1005" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32845744" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290461" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.16433942" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1875" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.54388297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -294,7 +309,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +318,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Front-End-dev/Fragebogen2.html" />
     <entry file="file://$PROJECT_DIR$/Front-End-dev/Fragebogen3.html" />
     <entry file="file://$PROJECT_DIR$/Front-End-dev/Fragebogen4.html" />
     <entry file="file://$PROJECT_DIR$/Front-End-dev/Fragebogen5.html" />
@@ -345,7 +358,13 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/uikit.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Front-End-final/Fragebogen.html" />
     <entry file="file://$PROJECT_DIR$/FrontEndVue/js/form-handler.js" />
@@ -368,10 +387,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FrontEndVue/js/dynamic.js" />
     <entry file="file://$PROJECT_DIR$/Front-End-final/js/form-handler.js" />
+    <entry file="file://$PROJECT_DIR$/images/IFB.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fragebogen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7524">
-          <caret line="418" column="38" selection-start-line="418" selection-start-column="28" selection-end-line="418" selection-end-column="38" />
+        <state relative-caret-position="570">
+          <caret line="962" column="89" selection-start-line="962" selection-start-column="89" selection-end-line="962" selection-end-column="89" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -432,17 +461,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/fragebogen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="716">
+          <caret line="193" column="41" lean-forward="true" selection-start-line="193" selection-start-column="41" selection-end-line="193" selection-end-column="41" />
         </state>
       </provider>
     </entry>
