@@ -3,6 +3,11 @@ window.onload = function () {
             el: '#fragebogen',
             data: {
                 questionIndex: 1,
+                /**
+                 * Das JSONArray, welches am Ende der Umfrage alle Antworten beinhaltet.
+                 * Pro Frage gibt es ein JSONObject mit der ID der Frage und den Antworten.
+                 * 
+                 */
                 answers: [
                     {question_id: 1, answer: [], type: "checkbox"}, //checkbox
                     {question_id: 2, answer: [], type: "radio"}, //radio
@@ -34,6 +39,13 @@ window.onload = function () {
                 instructionText: ""
             },
             methods: {
+
+                /**
+                 * Methode um zur nächsten Frage zu springen. Hier wird die validate()-Methode aufgerufen und der questionIndex erhöht sich,
+                 * bis die letzte Frage erreicht wurde, woraufhin die sendServer()-Methode aufgerufen wird.
+                 * 
+                 * @param {*} event - Event wird beim Klicken des Buttons 'Weiter' ausgeführt
+                 */
                 next: function (event) {
                     this.validate();
 
@@ -44,9 +56,17 @@ window.onload = function () {
                         this.questionIndex++;
                     }
                 },
+                /**
+                 * Methode um zur vorherigen Frage zu springen. der questionIndex wird um eins verringert.
+                 * @param {*} event - Event wird beim Klicken des Buttons 'Zurück' ausgeführt
+                 */
                 back: function (event) {
                     this.questionIndex--;
                 },
+
+                /**
+                 * Methode die den Post Request mit den ganzen Antworten abschickt.
+                 */
                 sendServer: function () {
 
                     const body = JSON.stringify(
@@ -62,6 +82,10 @@ window.onload = function () {
                             console.log('saved successfully')
                         });
                 },
+
+                /**
+                 * Da die Fragen in Kategorien eingeteilt sind, wird der Name der Kategorie je nach Frage geändert.
+                 */
                 checkHeadline: function () {
                     if (this.questionIndex < 4) {
                         this.headline = "Allgemeines";
@@ -88,6 +112,10 @@ window.onload = function () {
                         this.headline = "Institut für Bauforschung e. V.";
                     }
                 },
+
+                /**
+                 * Mit dieser Methode wird immer überprüft ob jede Frage "richtig" beantwortet wurde, das heißt ob alle notwendigen Eingaben getätigt wurden.
+                 */
                 validate: function () {
                     if (this.answers[this.questionIndex - 1].type == "100%") {
                         if (this.answers[this.questionIndex - 1].answer.length <= 0) {
@@ -148,9 +176,19 @@ window.onload = function () {
                     this.instructionText = "";
                     this.otherTextStatus = false;
                 },
+
+                /**
+                 * Methode um die Fehlermeldung bei einer Falscheingabe zu schließen.
+                 * @param {*} event - Event zum Schließen des Errors
+                 */
                 closeError: function (event) {
                     this.error = false;
                 },
+
+                /**
+                 * Methode um eine Antwort im JSONArray zurückzusetzen.
+                 * @param {*} indexReset 
+                 */
                 resetAnswer: function (indexReset) {
                     this.answers.forEach((el, index) => {
                         if (index === indexReset) {
@@ -158,6 +196,10 @@ window.onload = function () {
                         }
                     });
                 },
+
+                /**
+                 * Methode um die Textboxen hervorzuheben, sobald die richtigen Checkboxen angeklickt wurden.
+                 */
                 toogleOtherText: function () {
                     if (this.otherTextStatus === false) {
                         this.otherTextStatus = true;
@@ -165,6 +207,10 @@ window.onload = function () {
                         this.otherTextStatus = false;
                     }
                 },
+
+                /**
+                 * Überprüft ob die Textfelder einen Eintrag besitzen und fügt diesen dann dem JSONObject hinzu.
+                 */
                 checkOtherText: function () {
                     if (this.answers[this.questionIndex - 1].hasOwnProperty('other')) {
                         if (this.answers[this.questionIndex - 1].other != "" && Array.isArray(this.answers[this.questionIndex - 1].answer)) {
@@ -176,6 +222,12 @@ window.onload = function () {
                         }
                     }
                 },
+
+                /**
+                 * Wird bei Frage 6 angewandt, um die Slider auszublenden wenn die "Ohne..." Checkboxen gecheckt sind.
+                 * @param {*} question_index - Index der Frage
+                 * @param {*} answer_index - Index der Antwort
+                 */
                 noAnswer: function (question_index, answer_index) {
                     this.answers.forEach((el, index) => {
                         if (index === question_index) {
@@ -183,6 +235,12 @@ window.onload = function () {
                         }
                     });
                 },
+
+                /**
+                 * Überprüft das Textlimit (150 Zeichen) der Textfelder.
+                 * 
+                 * @method checkTextLimit
+                 */
                 checkTextLimit: function () {
                     if (this.answers[this.questionIndex - 1].hasOwnProperty('other')) {
                         this.answers.forEach((el, index) => {
@@ -196,6 +254,13 @@ window.onload = function () {
                 },
             },
             computed: {
+
+                /**
+                 * Überprüft ob der User die Umfrage im gültigen Zeitraum ausfüllt.
+                 * Liefert true, wenn der Fragebogen noch aktiv ist.
+                 * 
+                 * @method checkAviable
+                 */
                 checkAviable: function () {                
                     let endDate = new Date(this.endDate);
                     let currentDate = new Date();
@@ -207,6 +272,12 @@ window.onload = function () {
                 },
             },
             watch: {
+
+                /**
+                 * Überprüft die Headline.
+                 * 
+                 * @method questionIndex
+                 */
                 questionIndex: function () {
                     this.checkHeadline();
                 }
