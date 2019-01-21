@@ -29,7 +29,7 @@ window.onload = function () {
                 otherTextStatus: false,
                 errorMessage: "",
                 error: false,
-                endDate: "2019-02-30",
+                endDate: '2019-02-28',
                 textLimit: 150,
                 instructionText: ""
             },
@@ -196,9 +196,13 @@ window.onload = function () {
                 },
             },
             computed: {
-                checkAviable: function () {
-                    const endDate = new Date(this.endDate);
-                    const currentDate = new Date();
+                checkAviable: function () {                
+                    let endDate = new Date(this.endDate);
+                    let currentDate = new Date();
+                                             
+                    endDate = endDate.getFullYear() + "-" + endDate.getMonth() + "-" + endDate.getDate();             
+                    currentDate = currentDate.getFullYear() + "-" + currentDate.getMonth() + "-" + currentDate.getDate();
+                      
                     return endDate > currentDate;
                 },
             },
